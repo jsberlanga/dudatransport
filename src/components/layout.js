@@ -70,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
   }
   button {
     background-color: #38598b;
-    color: white;
+    color: ${styles.colors.mainLight};
   }
 `
 
@@ -100,6 +100,31 @@ const Container = styled.div`
   }
 `
 
+const PagesContainer = styled.div`
+  display: grid;
+  grid-template:
+    ". header header ." 5em
+    "main main main main" 60vh
+    "footer footer footer footer" 10em
+    / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
+  background-color: ${styles.colors.mainLight};
+  background-image: url(${props => props.url});
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+`
+
+const PagesLayout = ({ children, url }) => (
+  <>
+    <GlobalStyle />
+    <PagesContainer url={url}>
+      <Header color={styles.colors.mainLight} />
+      <main style={{ gridArea: "main", margin: "0 auto" }}>{children}</main>
+      <Footer />
+    </PagesContainer>
+  </>
+)
+
 const Layout = () => (
   <>
     <GlobalStyle />
@@ -115,4 +140,4 @@ const Layout = () => (
   </>
 )
 
-export default Layout
+export { Layout as default, PagesLayout }

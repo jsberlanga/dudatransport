@@ -6,12 +6,17 @@ const NavbarWrapper = styled.nav`
   display: flex;
   h5 {
     margin-left: 3rem;
+    color: ${props => props.color};
+    cursor: pointer;
   }
 `
 
-const Navbar = () => {
+const Navbar = ({ color }) => {
   return (
-    <NavbarWrapper>
+    <NavbarWrapper color={color}>
+      <Link to="/">
+        <h5>Home</h5>
+      </Link>
       <Link to="/about">
         <h5>About</h5>
       </Link>

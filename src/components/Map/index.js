@@ -6,6 +6,7 @@ import EuropeMap from "../../images/map/map2.svg"
 
 const MapWrapper = styled.div`
   grid-area: map;
+
   background: ${styles.colors.mainLight};
   margin: 3rem auto;
   text-align: center;
