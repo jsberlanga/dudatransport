@@ -11,7 +11,7 @@ import Footer from "./Footer"
 
 import { styles } from "../utils"
 
-import img from "../images/trucks/MAIN2.jpg"
+import img from "../images/hero-modified.jpg"
 
 const GlobalStyle = createGlobalStyle`
   * {
