@@ -31,7 +31,7 @@ const MapWrapper = styled.div`
 const Map = () => {
   return (
     <MapWrapper>
-      <img src={EuropeMap} alt="European Map" />
+      <img src={EuropeMap} alt="European-Map" />
       <div className="text">
         <div className="title">
           <h3>We Provide Service All Across Europe</h3>

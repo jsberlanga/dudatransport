@@ -14,7 +14,6 @@ const ServicesWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   grid-gap: 2rem;
-
   .card {
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@ const ServicesWrapper = styled.div`
       margin: 0.4rem 0;
     }
   }
-
   img {
     width: 5rem;
   }
@@ -36,6 +34,12 @@ const ServicesWrapper = styled.div`
   }
   .link:hover {
     border: 2px solid ${styles.colors.brown};
+  }
+
+  @media (max-width: 1200px) {
+    h4 {
+      font-size: 1.2em;
+    }
   }
 `
 

@@ -1,29 +1,27 @@
 import React from "react"
 import styled from "styled-components"
-import logo from "../../images/icon.png"
+
+import { styles } from "../../utils"
 
 const date = new Date().getFullYear()
 
 const FooterWrapper = styled.footer`
   grid-area: footer;
-  height: 2.5rem;
   bottom: 0;
   right: 0;
+  background: ${styles.colors.darkGray};
+  color: ${styles.colors.mainLight};
+  text-align: right;
+  padding: 4em;
 `
 const Footer = () => (
   <FooterWrapper>
-    <div>© {date}, </div>
-    <a href="https://www.dudatransport.com">
-      dudatransport.com. All rights reserved
-    </a>
-    <img
-      src={logo}
-      alt="logo"
-      style={{
-        width: "2.4rem",
-        marginLeft: "0.4rem",
-      }}
-    />
+    <div>
+      © {date},
+      <a href="https://www.dudatransport.com">
+        dudatransport.com. All rights reserved
+      </a>
+    </div>
   </FooterWrapper>
 )
 

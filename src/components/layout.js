@@ -61,6 +61,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.2em;
   }
 
+  p {
+    font-size: 1em;
+  }
+
   a {
     all: unset;
     cursor: pointer;
@@ -81,22 +85,27 @@ const Container = styled.div`
     "hero hero form form" 90vh
     ". map map ." auto
     ". services services ." 60vh
-    ". about about ." auto
-    "footer footer footer footer" 10em
+    "about about about about" 95vh
+    "footer footer footer footer" 7em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   background-image: url(${img});
   background-size: contain;
   background-repeat: no-repeat;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1130px) {
+    background-size: 150%;
+    grid-template-columns: 1fr 6fr 1fr;
     grid-template:
-      "header" 5em
-      "hero" 50vh
-      "form" 60vh
-      "services" 60vh
-      "about" auto
-      "map" auto
-      "footer" 10em / 1fr;
+      ". header ." minmax(2em, 1fr)
+      "hero hero hero" min-content
+      ". form ." auto
+      "map map map" auto
+      "services services services" auto
+      "about about about" auto
+      "footer footer footer" auto;
+  }
+
+  @media (max-width: 768px) {
   }
 `
 
