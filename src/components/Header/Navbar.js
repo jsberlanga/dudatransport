@@ -6,24 +6,24 @@ const NavbarWrapper = styled.nav`
   display: flex;
   h5 {
     margin-left: 3rem;
-    color: ${props => props.color};
+    color: ${props => props.navcolor};
     cursor: pointer;
   }
 `
 
-const Navbar = ({ color }) => {
+const Navbar = ({ navcolor }) => {
   return (
-    <NavbarWrapper color={color}>
+    <NavbarWrapper navcolor={navcolor}>
       <Link to="/">
         <h5>Home</h5>
       </Link>
       <Link to="/about">
         <h5>About</h5>
       </Link>
-      <Link to="/trucks">
+      <Link to="/services">
         <h5>Our Services</h5>
       </Link>
-      <Link to="/trucks">
+      <Link to="/contact">
         <h5>Find Us</h5>
       </Link>
     </NavbarWrapper>

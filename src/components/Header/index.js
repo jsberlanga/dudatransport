@@ -14,11 +14,11 @@ const HeaderWrapper = styled.div`
   color: ${styles.colors.mainLight};
 `
 
-export default ({ color }) => {
+export default ({ navcolor, logocolor }) => {
   return (
     <HeaderWrapper>
-      <Logo />
-      <Navbar color={color} />
+      <Logo logocolor={logocolor} />
+      <Navbar navcolor={navcolor} />
     </HeaderWrapper>
   )
 }

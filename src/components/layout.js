@@ -1,17 +1,7 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
-import Header from "./Header"
-import Hero from "./Hero"
-import Form from "./Form"
-import Services from "./Services"
-import About from "./About"
-import Map from "./Map"
-import Footer from "./Footer"
-
 import { styles } from "../utils"
-
-import img from "../images/hero-modified.jpg"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     font-size: 1.2rem;
     font-family: 'Lora', serif;
-    background: ${styles.colors.mainLight};
-    color: ${styles.colors.darkGray};
+    background: ${props => props.background};
+    color: ${props => props.color};
   }
   
   h1,
@@ -88,7 +78,7 @@ const Container = styled.div`
     "about about about about" 95vh
     "footer footer footer footer" 7em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
-  background-image: url(${img});
+  background-image: url(${props => props.url});
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -96,13 +86,16 @@ const Container = styled.div`
     background-size: 150%;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template:
-      ". header ." minmax(2em, 1fr)
-      "hero hero hero" min-content
-      ". form ." auto
+      ". header ." 5em
+      "hero hero hero" auto
       "map map map" auto
       "services services services" auto
       "about about about" auto
+      ". form ." auto
       "footer footer footer" auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 
   @media (max-width: 768px) {
@@ -113,40 +106,26 @@ const PagesContainer = styled.div`
   display: grid;
   grid-template:
     ". header header ." 5em
-    "main main main main" 60vh
+    "main main main main" minmax(22.6em, 1fr)
     "footer footer footer footer" 10em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
-  background-color: ${styles.colors.mainLight};
   background-image: url(${props => props.url});
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  opacity: 0.9;
 `
 
-const PagesLayout = ({ children, url }) => (
+const PagesLayout = ({ children, url, background, color }) => (
   <>
-    <GlobalStyle />
-    <PagesContainer url={url}>
-      <Header color={styles.colors.mainLight} />
-      <main style={{ gridArea: "main", margin: "0 auto" }}>{children}</main>
-      <Footer />
-    </PagesContainer>
+    <GlobalStyle background={background} color={color} />
+    <PagesContainer url={url}>{children}</PagesContainer>
   </>
 )
 
-const Layout = () => (
+const HomeLayout = ({ children, url }) => (
   <>
     <GlobalStyle />
-    <Container>
-      <Header />
-      <Hero />
-      <Form />
-      <Map />
-      <Services />
-      <About />
-      <Footer />
-    </Container>
+    <Container url={url}>{children}</Container>
   </>
 )
 
-export { Layout as default, PagesLayout }
+export { HomeLayout as default, PagesLayout }
