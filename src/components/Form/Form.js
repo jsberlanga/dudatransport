@@ -14,6 +14,10 @@ const FormWrapper = styled.form`
   padding: 1em 3em 2em;
   border-radius: 0.2rem;
 
+  p {
+    font-style: italic;
+  }
+
   input,
   textarea,
   button {

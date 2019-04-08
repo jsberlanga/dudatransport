@@ -56,7 +56,7 @@ const About = () => {
       <div className="image" />
       <div className="text">
         <div className="title">
-          <h3>MORE ABOUT US</h3>
+          <h3>ABOUT US</h3>
         </div>
         <div className="subtitle">
           <p>
@@ -72,6 +72,14 @@ const About = () => {
             We cooperate with reliable and proven transport and logistic
             companies and are able to provide transport services within whole
             Europe.
+          </p>
+          <p>
+            We can guarantee the safety of transport, thanks to our liability
+            insurance that quotes for 100.000 EUR.
+          </p>
+          <p>
+            Client satisfaction is our priority. It is very important to us to
+            offer the best quality of services in the shortest possible time.
           </p>
         </div>
         <Link className="link" to="/about">

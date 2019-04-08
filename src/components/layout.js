@@ -75,7 +75,7 @@ const Container = styled.div`
     "hero hero form form" 90vh
     ". map map ." auto
     ". services services ." 60vh
-    "about about about about" 95vh
+    "about about about about" 105vh
     "footer footer footer footer" 7em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   background-image: url(${props => props.url});

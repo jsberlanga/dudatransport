@@ -26,9 +26,8 @@ const ContactWrapper = styled.div`
   background-image: url(${hello});
   background-size: 100% auto;
   background-repeat: no-repeat;
-  width: 100vw;
-  margin: 0 auto;
-  margin-top: -5em;
+  width: 100%;
+  margin: -5em auto;
   z-index: -100;
 
   display: grid;
@@ -38,13 +37,13 @@ const ContactWrapper = styled.div`
 
   .form {
     grid-area: form;
-    background: rgba(60, 65, 94, 0.5);
-    padding: 5em;
+    background: rgba(60, 65, 94, 0.87);
+    padding: 6em 3em 3em;
   }
   .info {
     grid-area: info;
     background: rgba(60, 65, 94, 0.8);
-    padding: 8em;
+    padding: 9em 5em 5em;
     img {
       width: 2em;
       margin-right: 1em;
@@ -62,7 +61,7 @@ const ContactWrapper = styled.div`
       justify-content: center;
     }
     .map {
-      height: 16.4em;
+      height: 17.8em;
     }
   }
 
@@ -95,18 +94,18 @@ const ContactPage = () => (
     <ContactWrapper style={{ gridArea: "main" }}>
       <div className="form">
         <Form
-          title="Leave us your contact info"
+          title="Leave us your info"
           subtitle="and we will get back to you."
         />
       </div>
       <div className="info">
         <div className="title">
-          <h1>Location</h1>
+          <h2>Location</h2>
         </div>
         <div className="details">
           <p>
             <img src={home} alt="home" />
-            Milocice 136, SLomniki, Poland, 32-090
+            Milocice 136, Slomniki, Poland, 32-090
           </p>
           <p>
             <img src={envelope} alt="email" />
