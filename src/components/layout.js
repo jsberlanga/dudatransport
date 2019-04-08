@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 import { styles } from "../utils"
 
@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
   }
   
   body {
@@ -68,6 +69,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const opacity = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+`
+
 const Container = styled.div`
   display: grid;
   grid-template:
@@ -75,12 +85,13 @@ const Container = styled.div`
     "hero hero form form" 90vh
     ". map map ." auto
     ". services services ." 60vh
-    "about about about about" 105vh
+    "about about about about" auto
     "footer footer footer footer" 7em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   background-image: url(${props => props.url});
   background-size: contain;
   background-repeat: no-repeat;
+  animation: ${opacity} 1.5s ease-out;
 
   @media (max-width: 1130px) {
     background-size: 150%;
@@ -112,6 +123,7 @@ const PagesContainer = styled.div`
   background-image: url(${props => props.url});
   background-size: 100% auto;
   background-repeat: no-repeat;
+  animation: ${opacity} 1.5s ease-out;
 `
 
 const PagesLayout = ({ children, url, background, color }) => (
