@@ -8,10 +8,10 @@ const FormWrapper = styled.div`
   display: flex;
 `
 
-export default () => {
+export default ({ title, subtitle }) => {
   return (
     <FormWrapper>
-      <Form />
+      <Form title={title} subtitle={subtitle} />
     </FormWrapper>
   )
 }

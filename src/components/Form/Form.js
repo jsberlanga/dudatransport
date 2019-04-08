@@ -78,8 +78,8 @@ class Form extends React.Component {
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
-        <h2>Enquire Now</h2>
-        <p>We will get back to you within 24 hours.</p>
+        <h2>{this.props.title}</h2>
+        <p>{this.props.subtitle}</p>
         <input type="hidden" name="form-name" value="contact" />
         <input
           name="name"

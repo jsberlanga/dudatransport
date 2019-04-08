@@ -19,7 +19,10 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Header logocolor="light" />
     <Hero />
-    <Form />
+    <Form
+      title="Enquire Now"
+      subtitle="We will get back to you within 24 hours."
+    />
     <Map />
     <Services />
     <About />
