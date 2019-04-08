@@ -17,6 +17,8 @@ import envelope from "../images/icons/envelope.svg"
 import phone from "../images/icons/phone.svg"
 import home from "../images/icons/home.svg"
 
+import GoogleMaps from "../components/GoogleMaps"
+
 const ContactWrapper = styled.div`
   margin: auto auto;
   text-align: center;
@@ -50,13 +52,34 @@ const ContactWrapper = styled.div`
     .title,
     .map {
       padding-bottom: 1.4em;
+      position: relative;
     }
-    .details > h5 {
+    .details > p {
       padding-bottom: 1em;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+    }
+    .map {
+      height: 16.4em;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    grid-template:
+      "info" auto
+      "form" auto /
+      1fr;
+    .info {
+      padding: 8em 4em 1em;
+    }
+    .form,
+    .map {
+      padding: 0;
+    }
+    .info > .map {
+      height: 26.7em;
     }
   }
 `
@@ -72,7 +95,7 @@ const ContactPage = () => (
     <ContactWrapper style={{ gridArea: "main" }}>
       <div className="form">
         <Form
-          title="Leave us your info"
+          title="Leave us your contact info"
           subtitle="and we will get back to you."
         />
       </div>
@@ -81,21 +104,21 @@ const ContactPage = () => (
           <h1>Location</h1>
         </div>
         <div className="details">
-          <h5>
+          <p>
             <img src={home} alt="home" />
             Milocice 136, SLomniki, Poland, 32-090
-          </h5>
-          <h5>
+          </p>
+          <p>
             <img src={envelope} alt="email" />
             dudatransport@gmail.com
-          </h5>
-          <h5>
+          </p>
+          <p>
             <img src={phone} alt="phone" />
             +48 123 456 789
-          </h5>
+          </p>
         </div>
         <div className="map">
-          <h1>Map</h1>
+          <GoogleMaps />
         </div>
       </div>
     </ContactWrapper>
