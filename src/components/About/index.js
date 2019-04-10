@@ -51,6 +51,7 @@ const AboutWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
+    margin: 2rem 0.7rem;
   }
 `
 

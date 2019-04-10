@@ -10,6 +10,9 @@ const HeroWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10em auto;
+  @media (max-width: 768px) {
+    padding: 0 1.4rem;
+  }
 `
 
 const Hero = () => (

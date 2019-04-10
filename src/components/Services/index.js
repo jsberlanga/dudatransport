@@ -38,8 +38,7 @@ const ServicesWrapper = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    max-width: 25rem;
-    margin: 0 auto;
+    margin: 0 4rem;
   }
 `
 
