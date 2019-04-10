@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
   }
   
   body {
@@ -18,7 +17,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.2rem;
     font-family: 'Lora', serif;
     background: ${props => props.background};
+
     color: ${props => props.color};
+    
+    @media(max-width:768px) {
+      font-size: 95%;
+      /* background-color: silver;
+      background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+    }
   }
   
   h1,
@@ -81,10 +87,10 @@ const opacity = keyframes`
 const Container = styled.div`
   display: grid;
   grid-template:
-    ". header header ." 5em
+    ". header header ." auto
     "hero hero form form" 90vh
     ". map map ." auto
-    ". services services ." 60vh
+    ". services services ." auto
     "about about about about" auto
     "footer footer footer footer" 7em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
@@ -92,31 +98,34 @@ const Container = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   animation: ${opacity} 1.5s ease-out;
+  grid-row-gap: 1rem;
 
   @media (max-width: 1130px) {
     background-size: 150%;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template:
-      ". header ." 5em
+      ". header ." auto
       "hero hero hero" auto
       "map map map" auto
       "services services services" auto
-      "about about about" auto
+      "about about about" minmax(130vh, 1fr)
       ". form ." auto
       "footer footer footer" auto;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
+    /* background-image: none; */
   }
 `
 
 const PagesContainer = styled.div`
   display: grid;
   grid-template:
-    ". header header ." 5em
+    ". header header ." auto
     "main main main main" minmax(22.6em, 1fr)
     "footer footer footer footer" 10em
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
@@ -124,6 +133,15 @@ const PagesContainer = styled.div`
   background-size: 100% auto;
   background-repeat: no-repeat;
   animation: ${opacity} 1.5s ease-out;
+
+  @media (max-width: 1130px) {
+    background-size: 150%;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template:
+      ". header ." auto
+      "main main main" auto
+      "footer footer footer" auto;
+  }
 `
 
 const PagesLayout = ({ children, url, background, color }) => (

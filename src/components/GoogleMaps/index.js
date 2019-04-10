@@ -2,9 +2,10 @@ import React, { Component } from "react"
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react"
 
 const mapStyles = {
-  width: "100%",
+  width: "80%",
   height: "100%",
   borderRadius: "1rem",
+  boxShadow: "1px 1px 8px -3px silver",
 }
 
 export class MapContainer extends Component {
@@ -28,6 +29,7 @@ export class MapContainer extends Component {
       })
     }
   }
+
   render() {
     return (
       <Map
@@ -46,7 +48,8 @@ export class MapContainer extends Component {
           onClose={this.onClose}
         >
           <div>
-            <h4>{this.state.selectedPlace.name}</h4>
+            <h5>{this.state.selectedPlace.name}</h5>
+            <p>Milocice 136, Slomniki, Poland, 32-090</p>
           </div>
         </InfoWindow>
       </Map>

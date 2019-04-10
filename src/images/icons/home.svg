@@ -3,15 +3,14 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 136 136" style="enable-background:new 0 0 136 136;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#F5F5F5;stroke:#F5F5F5;stroke-width:4;stroke-miterlimit:10;}
+	.st0{fill:#3C415E;stroke:#3C415E;stroke-width:4;stroke-miterlimit:10;}
 </style>
 <g>
 	<g>
 		<path class="st0" d="M107,74.8h-6.4c-1.7,2.8-3.5,5.6-5.4,8.1h6.7L123,126H13l21.1-43.1h6.7c-1.9-2.6-3.7-5.3-5.4-8.1H29L0,134.2
 			h136L107,74.8z"/>
 		<path class="st0" d="M68,1.9c-21.2,0-38.4,17.2-38.4,38.4c0,33.3,38.4,64.1,38.4,64.1s38.4-30.8,38.4-64.1
-			C106.4,19.1,89.2,1.9,68,1.9z M68,55.7c-8.5,0-15.4-6.9-15.4-15.4c0-8.5,6.9-15.4,15.4-15.4c8.5,0,15.4,6.9,15.4,15.4
-			C83.4,48.8,76.5,55.7,68,55.7z"/>
+			C106.4,19.1,89.2,1.9,68,1.9z M68,55.7c-8.5,0-15.4-6.9-15.4-15.4S59.5,24.9,68,24.9s15.4,6.9,15.4,15.4S76.5,55.7,68,55.7z"/>
 	</g>
 </g>
 </svg>

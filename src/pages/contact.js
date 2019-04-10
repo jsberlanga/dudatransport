@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 import { PagesLayout } from "../components/layout"
@@ -10,8 +9,6 @@ import Footer from "../components/Footer"
 import Form from "../components/Form"
 
 import { styles } from "../utils"
-
-import hello from "../images/hello2.jpg"
 
 import envelope from "../images/icons/envelope.svg"
 import phone from "../images/icons/phone.svg"
@@ -23,74 +20,94 @@ const ContactWrapper = styled.div`
   margin: auto auto;
   text-align: center;
 
-  background-image: url(${hello});
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   width: 100%;
-  margin: -5em auto;
-  z-index: -100;
+  margin: -5em 0 0;
+
+  background-color: #dfe2e2;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 
   display: grid;
   grid-template:
-    "form info" auto /
-    2fr 3fr;
+    ". info ." auto
+    ". form ." auto /
+    1fr 10fr 1fr;
 
   .form {
     grid-area: form;
-    background: rgba(60, 65, 94, 0.87);
-    padding: 6em 3em 3em;
+    form {
+      width: 60%;
+    }
   }
   .info {
     grid-area: info;
-    background: rgba(60, 65, 94, 0.8);
-    padding: 9em 5em 5em;
+    margin-top: 9em;
     img {
       width: 2em;
       margin-right: 1em;
     }
     .title,
     .map {
-      padding-bottom: 1.4em;
       position: relative;
+    }
+    .title > h1 {
+      margin-bottom: 0.7em;
+      letter-spacing: 0.4em;
+      font-weight: 700;
     }
     .details > p {
       padding-bottom: 1em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
     .map {
-      height: 17.8em;
+      height: 25em;
+      left: 10%;
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1130px) {
+    .form {
+      form {
+        width: 70%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
     grid-template:
       "info" auto
       "form" auto /
       1fr;
-    .info {
-      padding: 8em 4em 1em;
-    }
-    .form,
-    .map {
-      padding: 0;
-    }
-    .info > .map {
-      height: 26.7em;
+
+    .form {
+      display: flex;
+      justify-content: center;
+      form {
+        width: 90%;
+      }
     }
   }
 `
 
+// const ImageWrapper = styled.div`
+//   width: 100vw;
+//   z-index: -999;
+//   position: absolute;
+//   opacity: 0.2;
+// `
+
 const ContactPage = () => (
   <PagesLayout
-    background={styles.colors.darkGray}
-    color={styles.colors.mainLight}
+    background={styles.colors.lightGray}
+    color={styles.colors.darkGray}
   >
     <SEO title="Find Us" keywords={[`gatsby`, `application`, `react`]} />
-    <Header navcolor={styles.colors.mainLight} logocolor="light" />
 
+    <Header navcolor={styles.colors.blue} logocolor="dark" />
     <ContactWrapper style={{ gridArea: "main" }}>
       <div className="form">
         <Form
@@ -100,7 +117,7 @@ const ContactPage = () => (
       </div>
       <div className="info">
         <div className="title">
-          <h2>Location</h2>
+          <h1>THIS IS OUR LOCATION</h1>
         </div>
         <div className="details">
           <p>

@@ -34,6 +34,9 @@ const FormWrapper = styled.form`
     ::placeholder {
       color: ${styles.colors.mainLight};
       font-size: 1.1rem;
+      @media (max-width: 768px) {
+        font-size: 0.9rem;
+      }
     }
   }
   button {

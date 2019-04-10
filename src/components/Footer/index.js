@@ -9,8 +9,8 @@ const FooterWrapper = styled.footer`
   grid-area: footer;
   bottom: 0;
   right: 0;
-  background: ${styles.colors.darkGray};
-  color: ${styles.colors.mainLight};
+  background: ${styles.colors.lightGray};
+  color: ${styles.colors.darkGray};
   text-align: right;
   padding: 4em;
 `

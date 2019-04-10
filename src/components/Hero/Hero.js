@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import { styles, Button } from "../../utils/"
 
@@ -13,10 +14,10 @@ const HeroWrapper = styled.div`
 
 const Hero = () => (
   <HeroWrapper>
-    <h1>We Provide something</h1>
-    <p>We Provide Services. Guaranteed by more than a hundred awards</p>
+    <h1>We Do Express Transport</h1>
+    <p>Guaranteed by more than 10 years of experience and customer delight.</p>
     <Button style={{ borderRadius: "5em", marginTop: "1em" }}>
-      Learn more
+      <Link to="/services">Learn more</Link>
     </Button>
   </HeroWrapper>
 )

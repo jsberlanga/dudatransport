@@ -36,10 +36,10 @@ const ServicesWrapper = styled.div`
     border: 2px solid ${styles.colors.brown};
   }
 
-  @media (max-width: 1200px) {
-    h4 {
-      font-size: 1.2em;
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    max-width: 25rem;
+    margin: 0 auto;
   }
 `
 

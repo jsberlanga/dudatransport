@@ -9,13 +9,11 @@ import fleet from "../../images/fleet.jpg"
 const AboutWrapper = styled.div`
   grid-area: about;
 
-  margin: 3rem auto;
+  margin: 3rem 3rem;
   text-align: center;
   display: grid;
   grid-template-columns: 5fr 4.2fr;
   box-shadow: 2px 2px 5px -3px ${styles.colors.darkGray};
-
-  margin: 0 2rem;
 
   .image {
     background-image: url(${fleet});
@@ -23,7 +21,7 @@ const AboutWrapper = styled.div`
     background-repeat: no-repeat;
   }
   .text {
-    padding: 3rem;
+    padding: 1rem 3rem;
     background: ${styles.colors.blue};
     color: ${styles.colors.mainLight};
     display: flex;
@@ -36,7 +34,7 @@ const AboutWrapper = styled.div`
       font-weight: 700;
     }
     .subtitle {
-      margin-top: 3rem;
+      margin-top: 1rem;
       p {
         margin: 1.25rem 0;
       }
@@ -48,6 +46,12 @@ const AboutWrapper = styled.div`
       font-weight: 400;
     }
   }
+
+  @media (max-width: 1130px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
 `
 
 const About = () => {
@@ -56,7 +60,7 @@ const About = () => {
       <div className="image" />
       <div className="text">
         <div className="title">
-          <h3>ABOUT US</h3>
+          <h3>MORE ABOUT US</h3>
         </div>
         <div className="subtitle">
           <p>
@@ -72,14 +76,6 @@ const About = () => {
             We cooperate with reliable and proven transport and logistic
             companies and are able to provide transport services within whole
             Europe.
-          </p>
-          <p>
-            We can guarantee the safety of transport, thanks to our liability
-            insurance that quotes for 100.000 EUR.
-          </p>
-          <p>
-            Client satisfaction is our priority. It is very important to us to
-            offer the best quality of services in the shortest possible time.
           </p>
         </div>
         <Link className="link" to="/about">
