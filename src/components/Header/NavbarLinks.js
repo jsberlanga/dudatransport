@@ -9,7 +9,7 @@ const NavbarWrapper = styled.ul`
   height: ${props => (props.isOpen ? "10rem" : "0")};
   overflow: hidden;
   border-radius: 0.4rem;
-
+  font-family: "Poppins";
   .nav-link {
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ const NavbarWrapper = styled.ul`
     width: 70vw;
   }
   h5 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 0 1.4rem;
     color: ${props => props.navcolor};
     cursor: pointer;

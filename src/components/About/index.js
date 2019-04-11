@@ -21,7 +21,7 @@ const AboutWrapper = styled.div`
     background-repeat: no-repeat;
   }
   .text {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     background: ${styles.colors.blue};
     color: ${styles.colors.mainLight};
     display: flex;
@@ -31,7 +31,7 @@ const AboutWrapper = styled.div`
     justify-content: center;
 
     .title > h3 {
-      font-weight: 700;
+      letter-spacing: 5px;
     }
     .subtitle {
       margin-top: 1rem;

@@ -23,9 +23,6 @@ const ContactWrapper = styled.div`
   width: 100%;
   margin: -5em 0 0;
 
-  background-color: #dfe2e2;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-
   display: grid;
   grid-template:
     ". info ." auto
@@ -51,12 +48,13 @@ const ContactWrapper = styled.div`
     }
     .title > h1 {
       margin-bottom: 0.7em;
-      letter-spacing: 0.4em;
+      letter-spacing: 0.25em;
       font-weight: 700;
+      font-family: "Montserrat", sans-serif;
     }
     .details > p {
       padding-bottom: 1em;
-      font-weight: 700;
+      /* font-weight: 700; */
       letter-spacing: 0.1em;
       display: flex;
       flex-direction: row;
@@ -93,13 +91,6 @@ const ContactWrapper = styled.div`
   }
 `
 
-// const ImageWrapper = styled.div`
-//   width: 100vw;
-//   z-index: -999;
-//   position: absolute;
-//   opacity: 0.2;
-// `
-
 const ContactPage = () => (
   <PagesLayout
     background={styles.colors.lightGray}
@@ -117,7 +108,7 @@ const ContactPage = () => (
       </div>
       <div className="info">
         <div className="title">
-          <h1>THIS IS OUR LOCATION</h1>
+          <h1>OUR LOCATION</h1>
         </div>
         <div className="details">
           <p>

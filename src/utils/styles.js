@@ -6,7 +6,7 @@ export const colors = {
   lightBlue: "#1cb3c8", // rgba(28, 179, 200, 1)
   brown: "#915b4a", // rgba(145, 91, 74, 1)
   mainDark: "#364f6b", // rgba(54, 79, 107, 1)
-  mainLight: "#f5f5f5", // rgba(245, 245, 245, 1)
+  mainLight: "#f6f5f5", // rgba(245, 245, 245, 1)
 }
 
 export const transitionDefault = "transition: all 0.3s ease-in-out"

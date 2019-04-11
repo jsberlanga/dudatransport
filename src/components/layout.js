@@ -3,7 +3,14 @@ import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 import { styles } from "../utils"
 
+import MyFont from "../static/fonts/proxima-nova.woff"
+
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('${MyFont}') format('opentype');
+  }
   * {
     padding: 0;
     margin: 0;
@@ -17,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.2rem;
     font-family: 'Lora', serif;
     background: ${props => props.background};
+    background-color: ${styles.colors.mainLight};
 
     color: ${props => props.color};
     
@@ -35,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.15;
     font-family: 'Domine', serif;
-    letter-spacing: 1.4px
+    letter-spacing: 1.4px;
   }
 
   h1 {
@@ -58,6 +66,15 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.2em;
   }
 
+  .text_small {font-size: 0.889em;}
+
+  .text_super_small {font-size: 0.723em;}
+
+  .hero {
+    /* font-family: 'proxima-nova' */
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
   p {
     font-size: 1em;
   }
@@ -72,6 +89,9 @@ const GlobalStyle = createGlobalStyle`
   button {
     background-color: #38598b;
     color: ${styles.colors.mainLight};
+  }
+  li {
+    list-style: none
   }
 `
 
@@ -92,7 +112,7 @@ const Container = styled.div`
     ". map map ." auto
     ". services services ." auto
     "about about about about" auto
-    "footer footer footer footer" 7em
+    "footer footer footer footer" minmax(7em, auto)
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   background-image: url(${props => props.url});
   background-size: contain;
@@ -127,7 +147,7 @@ const PagesContainer = styled.div`
   grid-template:
     ". header header ." auto
     "main main main main" minmax(22.6em, 1fr)
-    "footer footer footer footer" 10em
+    "footer footer footer footer" auto
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   background-image: url(${props => props.url});
   background-size: 100% auto;

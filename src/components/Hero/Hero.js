@@ -17,8 +17,15 @@ const HeroWrapper = styled.div`
 
 const Hero = () => (
   <HeroWrapper>
-    <h1>We Do Express Transport</h1>
-    <p>Guaranteed by more than 10 years of experience and customer delight.</p>
+    <h1
+      className="hero"
+      style={{ fontWeight: 700, textTransform: "uppercase" }}
+    >
+      We Deliver On Time
+    </h1>
+    <p style={{ fontStyle: "italic" }}>
+      Guaranteed by more than 10 years of experience and customer delight.
+    </p>
     <Button style={{ borderRadius: "5em", marginTop: "1em" }}>
       <Link to="/services">Learn more</Link>
     </Button>
