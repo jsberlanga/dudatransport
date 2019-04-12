@@ -3,13 +3,13 @@ import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 import { styles } from "../utils"
 
-import MyFont from "../static/fonts/proxima-nova.woff"
+import MyFont from "../static/fonts/montserrat-800.woff"
 
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-    font-family: 'proxima-nova';
-    src: url('${MyFont}') format('opentype');
+    font-family: 'montserrat-800';
+    src: url('${MyFont}') format('woff');
   }
   * {
     padding: 0;
@@ -70,9 +70,8 @@ const GlobalStyle = createGlobalStyle`
 
   .text_super_small {font-size: 0.723em;}
 
-  .hero {
-    /* font-family: 'proxima-nova' */
-    font-family: 'Montserrat', sans-serif !important;
+  .hero, {
+    font-family: 'montserrat-800'
   }
 
   p {

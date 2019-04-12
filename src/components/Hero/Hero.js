@@ -17,10 +17,7 @@ const HeroWrapper = styled.div`
 
 const Hero = () => (
   <HeroWrapper>
-    <h1
-      className="hero"
-      style={{ fontWeight: 700, textTransform: "uppercase" }}
-    >
+    <h1 className="hero" style={{ textTransform: "uppercase" }}>
       We Deliver On Time
     </h1>
     <p style={{ fontStyle: "italic" }}>

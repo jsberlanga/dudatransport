@@ -49,8 +49,7 @@ const ContactWrapper = styled.div`
     .title > h1 {
       margin-bottom: 0.7em;
       letter-spacing: 0.25em;
-      font-weight: 700;
-      font-family: "Montserrat", sans-serif;
+      font-family: "montserrat-800";
     }
     .details > p {
       padding-bottom: 1em;

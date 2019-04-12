@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-// import { styles } from "../../utils"
-
 const NavbarWrapper = styled.ul`
   list-style-type: none;
   height: ${props => (props.isOpen ? "10rem" : "0")};
@@ -17,10 +15,15 @@ const NavbarWrapper = styled.ul`
     width: 70vw;
   }
   h5 {
+    transition: all 0.2s;
     font-size: 1.3rem;
     margin: 0 1.4rem;
     color: ${props => props.navcolor};
     cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      font-weight: 700;
+    }
   }
 
   @media (min-width: 768px) {
