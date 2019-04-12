@@ -40,7 +40,7 @@ const ContactWrapper = styled.div`
     margin-top: 9em;
     img {
       width: 2em;
-      margin-right: 1em;
+      margin-right: 0.7em;
     }
     .title,
     .map {
@@ -53,12 +53,12 @@ const ContactWrapper = styled.div`
     }
     .details > p {
       padding-bottom: 1em;
-      /* font-weight: 700; */
       letter-spacing: 0.1em;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      margin: 0 1rem;
     }
     .map {
       height: 25em;
@@ -112,7 +112,7 @@ const ContactPage = () => (
         <div className="details">
           <p>
             <img src={home} alt="home" />
-            Milocice 136, Slomniki, Poland, 32-090
+            Milocice 136, Slomniki, 32-090, Poland
           </p>
           <p>
             <img src={envelope} alt="email" />
@@ -120,7 +120,7 @@ const ContactPage = () => (
           </p>
           <p>
             <img src={phone} alt="phone" />
-            +48 123 456 789
+            +48 123 456 789 / +48 123 456 789 (Internation Line)
           </p>
         </div>
         <div className="map">

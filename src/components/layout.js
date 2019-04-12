@@ -70,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
 
   .text_super_small {font-size: 0.723em;}
 
-  .hero, {
+  .hero {
     font-family: 'montserrat-800'
   }
 
