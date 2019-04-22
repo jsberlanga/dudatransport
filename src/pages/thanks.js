@@ -28,7 +28,7 @@ const ThanksImage = () => (
       query {
         image: file(relativePath: { eq: "delivered.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 3000) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
