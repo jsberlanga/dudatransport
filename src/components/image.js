@@ -6,9 +6,9 @@ const MainImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        image: file(relativePath: { eq: "hero-modified.jpg" }) {
+        image: file(relativePath: { eq: "hero.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 3000) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
