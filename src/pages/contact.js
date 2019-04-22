@@ -66,7 +66,7 @@ const ContactWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1200px) {
     .form {
       form {
         width: 70%;

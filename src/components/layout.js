@@ -5,6 +5,8 @@ import { styles } from "../utils"
 
 import MyFont from "../static/fonts/montserrat-800.woff"
 
+import MainImage from "./image"
+
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
@@ -30,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     
     @media(max-width:768px) {
       font-size: 95%;
+      overflow-x: hidden;                      
       /* background-color: silver;
       background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
     }
@@ -113,13 +116,10 @@ const Container = styled.div`
     "about about about about" auto
     "footer footer footer footer" minmax(7em, auto)
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
-  background-image: url(${props => props.url});
-  background-size: contain;
-  background-repeat: no-repeat;
   animation: ${opacity} 1.5s ease-out;
   grid-row-gap: 1rem;
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1200px) {
     background-size: 150%;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template:
@@ -130,14 +130,17 @@ const Container = styled.div`
       "about about about" minmax(130vh, 1fr)
       ". form ." auto
       "footer footer footer" auto;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
     text-align: center;
   }
-
-  @media (max-width: 768px) {
-    /* background-image: none; */
+  .main-image {
+    width: 100%;
+    position: absolute;
+    z-index: -999;
+    @media (max-width: 768px) {
+      width: 1000px;
+      margin-left: -3rem;
+    }
   }
 `
 
@@ -148,9 +151,6 @@ const PagesContainer = styled.div`
     "main main main main" minmax(22.6em, 1fr)
     "footer footer footer footer" auto
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
-  background-image: url(${props => props.url});
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   animation: ${opacity} 1.5s ease-out;
 
   @media (max-width: 1130px) {
@@ -173,7 +173,13 @@ const PagesLayout = ({ children, url, background, color }) => (
 const HomeLayout = ({ children, url }) => (
   <>
     <GlobalStyle />
-    <Container url={url}>{children}</Container>
+
+    <Container url={url}>
+      <div className="main-image">
+        <MainImage />
+      </div>
+      {children}
+    </Container>
   </>
 )
 

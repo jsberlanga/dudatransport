@@ -15,7 +15,7 @@ const AboutWrapper = styled.div`
   grid-template-columns: 5fr 4.2fr;
   box-shadow: 2px 2px 5px -3px ${styles.colors.darkGray};
 
-  .image {
+  .about-image {
     background-image: url(${fleet});
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ const AboutWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
@@ -58,7 +58,7 @@ const AboutWrapper = styled.div`
 const About = () => {
   return (
     <AboutWrapper>
-      <div className="image" />
+      <div className="about-image" />
       <div className="text">
         <div className="title">
           <h3>MORE ABOUT US</h3>

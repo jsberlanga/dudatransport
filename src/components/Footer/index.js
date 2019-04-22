@@ -58,7 +58,7 @@ const FooterWrapper = styled.footer`
     align-self: end;
     font-weight: 700;
   }
-  @media (max-width: 1130px) {
+  @media (max-width: 1200px) {
     grid-template:
       "company contact"
       "copyright copyright" / 4fr 5fr;
