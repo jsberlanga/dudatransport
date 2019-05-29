@@ -8,33 +8,33 @@ import MyFont from "../static/fonts/montserrat-800.woff"
 import MainImage from "./image"
 
 const GlobalStyle = createGlobalStyle`
-
-@font-face {
+  @font-face {
     font-family: 'montserrat-800';
     src: url('${MyFont}') format('woff');
   }
+
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-weight: 400;
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 1.2rem;
     font-family: 'Lora', serif;
     background: ${props => props.background};
     background-color: ${styles.colors.mainLight};
-
     color: ${props => props.color};
-    
+  }
+
+  html, body {
     @media(max-width:768px) {
       font-size: 95%;
-      overflow-x: hidden;                      
-      /* background-color: silver;
-      background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png"); */
+      overflow-x: hidden;       
+      position: relative   
     }
   }
   
@@ -123,7 +123,7 @@ const Container = styled.div`
     background-size: 150%;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template:
-      ". header ." auto
+      "header header header" auto
       "hero hero hero" auto
       "map map map" auto
       "services services services" auto
@@ -157,7 +157,7 @@ const PagesContainer = styled.div`
     background-size: 150%;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template:
-      ". header ." auto
+      "header header header" auto
       "main main main" auto
       "footer footer footer" auto;
   }

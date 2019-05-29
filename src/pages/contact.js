@@ -19,9 +19,7 @@ import GoogleMaps from "../components/GoogleMaps"
 const ContactWrapper = styled.div`
   margin: auto auto;
   text-align: center;
-
   width: 100%;
-  margin: -5em 0 0;
 
   display: grid;
   grid-template:
@@ -37,7 +35,6 @@ const ContactWrapper = styled.div`
   }
   .info {
     grid-area: info;
-    margin-top: 9em;
     img {
       width: 2em;
       margin-right: 0.7em;
@@ -46,14 +43,21 @@ const ContactWrapper = styled.div`
     .map {
       position: relative;
     }
+    .title {
+      padding: 5rem 2rem;
+      margin: 0 auto;
+    }
     .title > h1 {
-      margin-bottom: 0.7em;
       letter-spacing: 0.25em;
       font-family: "montserrat-800";
     }
+    .title > p {
+      letter-spacing: 1px;
+      font-style: italic;
+    }
     .details > p {
       padding-bottom: 1em;
-      letter-spacing: 0.1em;
+      letter-spacing: 1px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -87,6 +91,12 @@ const ContactWrapper = styled.div`
         width: 90%;
       }
     }
+    .info .details > p {
+      text-align: left;
+      margin-left: 2rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 `
 
@@ -95,19 +105,14 @@ const ContactPage = () => (
     background={styles.colors.lightGray}
     color={styles.colors.darkGray}
   >
-    <SEO title="Find Us" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
 
     <Header navcolor={styles.colors.blue} logocolor="dark" />
     <ContactWrapper style={{ gridArea: "main" }}>
-      <div className="form">
-        <Form
-          title="Leave us your info"
-          subtitle="and we will get back to you."
-        />
-      </div>
       <div className="info">
         <div className="title">
           <h1>OUR LOCATION</h1>
+          <p>Please use the information below to contact us</p>
         </div>
         <div className="details">
           <p>
@@ -120,12 +125,18 @@ const ContactPage = () => (
           </p>
           <p>
             <img src={phone} alt="phone" />
-            +48 123 456 789 / +48 123 456 789 (Internation Line)
+            +48 884 141 049 / +48 510 706 712 (Internation Line)
           </p>
         </div>
         <div className="map">
           <GoogleMaps />
         </div>
+      </div>
+      <div className="form">
+        <Form
+          title="Leave us your info"
+          subtitle="and we will get back to you."
+        />
       </div>
     </ContactWrapper>
     <Footer />

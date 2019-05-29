@@ -31,7 +31,9 @@ const AboutWrapper = styled.div`
     justify-content: center;
 
     .title > h3 {
-      letter-spacing: 5px;
+      letter-spacing: -4px;
+      text-transform: uppercase;
+      font-size: 3.2rem;
     }
     .subtitle {
       margin-top: 1rem;
@@ -44,6 +46,10 @@ const AboutWrapper = styled.div`
       background: #915b4a;
       background: ${styles.colors.brown};
       font-weight: 400;
+
+      &:hover {
+        background: ${styles.colors.brown2};
+      }
     }
   }
 
@@ -79,7 +85,7 @@ const About = () => {
             Europe.
           </p>
         </div>
-        <Link className="link" to="/about">
+        <Link className="link" to="/services">
           More details →
         </Link>
       </div>

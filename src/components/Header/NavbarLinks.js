@@ -4,41 +4,44 @@ import styled from "styled-components"
 
 const NavbarWrapper = styled.ul`
   list-style-type: none;
-  height: ${props => (props.isOpen ? "10rem" : "0")};
-  overflow: hidden;
-  border-radius: 0.4rem;
-  font-family: "Poppins";
+  display: flex;
+  justify-content: space-around;
   .nav-link {
     display: flex;
-    justify-content: center;
     padding: 1rem;
-    width: 70vw;
   }
   h5 {
+    font-size: 1.1rem;
+    letter-spacing: 0px;
     transition: all 0.2s;
-    font-size: 1.3rem;
-    margin: 0 1.4rem;
     color: ${props => props.navcolor};
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
+      border-bottom: 1.4px solid ${props => props.navcolor};
       font-weight: 700;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     height: auto;
     display: flex;
     flex-direction: row;
+
     .nav-link {
+      padding: 1rem 1.5rem;
       background-color: transparent;
       width: auto;
+    }
+    h5 {
+      font-size: 1.35rem;
+      margin: 0 1rem;
     }
   }
 `
 
-const NavbarLinks = ({ isOpen, navcolor }) => (
-  <NavbarWrapper isOpen={isOpen} navcolor={navcolor}>
+const NavbarLinks = ({ navcolor }) => (
+  <NavbarWrapper navcolor={navcolor}>
     <li>
       <Link to="/" className="nav-link">
         <h5>Home</h5>

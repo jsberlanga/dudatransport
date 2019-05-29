@@ -100,15 +100,15 @@ const Footer = () => (
         </li>
         <li>
           <FaPhone />
-          +48 123 456 789
+          +48 884 141 049
         </li>
         <li>
           <FaPhone />
-          +48 987 654 321 (International Line)
+          +48 510 706 712 (Internation Line)
         </li>
         <li>
           <FaRegEnvelope />
-          info@dudatransport.com
+          dudatransport@gmail.com
         </li>
       </ul>
     </div>

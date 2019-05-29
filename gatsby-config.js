@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Duda Transport`,
-    description: `Duda Transport | Express Transport`,
+    title: `Andzrej Duda Transport`,
+    description: ` AndzrejDuda Transport | Express Transport`,
     author: `Julio Soto`,
   },
   plugins: [
@@ -20,7 +20,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Domine", "Lora", "Montserrat"],
+          families: ["Domine", "Lora:400,400i,700,700i", "Montserrat"],
         },
       },
     },

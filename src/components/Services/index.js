@@ -18,8 +18,14 @@ const ServicesWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    * {
-      margin: 0.4rem 0;
+    justify-content: space-between;
+
+    .title {
+      margin: 1rem 0;
+    }
+    .subtitle {
+      text-align: justify;
+      margin: 2rem 1rem;
     }
   }
   img {
@@ -46,46 +52,54 @@ const Services = () => {
   return (
     <ServicesWrapper>
       <div className="card">
-        <img src={delivery} alt="delivery" />
-        <div className="title">
+        <div>
+          <img src={delivery} alt="delivery" />
+          <div className="title" />
           <h4>Safe Delivery</h4>
         </div>
         <div className="subtitle">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            dolor impedit atque, doloremque incidunt voluptates qui itaque
-            debitis laborum nemo?
+            Duda Transport is committed to being a responsible community
+            partner. Because of this commitment we are one of the safest
+            carriers in the industry. You can trust our company for your
+            transport.
           </p>
         </div>
         <Link className="link" to="/services">
           Learn more →
         </Link>
       </div>
+
       <div className="card">
-        <img src={fast} alt="fast" />
-        <h4>Express Service</h4>
-        <div className="title" />
+        <div>
+          <img src={fast} alt="fast" />
+          <div className="title" />
+          <h4>Express Service</h4>
+        </div>
         <div className="subtitle">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            dolor impedit atque, doloremque incidunt voluptates qui itaque
-            debitis laborum nemo?
+            Providing high-quality express transport that delivers on its
+            promise. Cost effective transport that provides experienced
+            carriers, which can minimize the additional cost associated with
+            transport.
           </p>
         </div>
         <Link className="link" to="/services">
           Learn more →
         </Link>
       </div>
+
       <div className="card">
-        <img src={support} alt="support" />
-        <div className="title">
+        <div>
+          <img src={support} alt="support" />
+          <div className="title" />
           <h4>24/7 Support</h4>
         </div>
         <div className="subtitle">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-            dolor impedit atque, doloremque incidunt voluptates qui itaque
-            debitis laborum nemo?
+            We provide 24/7 notifications and support to our clients. If you
+            have any questions about our ground transport and freight services,
+            please contact us. We will be happy to talk to you at any time!
           </p>
         </div>
         <Link className="link" to="/services">

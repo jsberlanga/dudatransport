@@ -10,18 +10,31 @@ const HeroWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10em auto;
+  h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1.4rem;
+  }
   @media (max-width: 768px) {
     padding: 0 1.4rem;
+  }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `
 
 const Hero = () => (
   <HeroWrapper>
-    <h1 className="hero" style={{ textTransform: "uppercase" }}>
-      We Deliver On Time
-    </h1>
+    <h1 className="hero">We Deliver On Time</h1>
     <p style={{ fontStyle: "italic" }}>
-      Guaranteed by more than 10 years of experience and customer delight.
+      Guaranteed by years of experience and customer delight.
     </p>
     <Button style={{ borderRadius: "5em", marginTop: "1em" }}>
       <Link to="/services">Learn more</Link>

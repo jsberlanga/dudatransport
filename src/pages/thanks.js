@@ -17,6 +17,7 @@ const Image = styled.div`
   width: 100%;
   position: absolute;
   z-index: -999;
+  filter: opacity(80%);
   @media (max-width: 768px) {
     width: 768px;
   }
@@ -41,8 +42,9 @@ const ThanksImage = () => (
 
 const ThanksWrapper = styled.div`
   color: ${styles.colors.mainLight};
-  margin: auto auto;
+  margin: 4rem auto;
   text-align: center;
+
   * {
     margin-bottom: 1.4em;
   }

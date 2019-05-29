@@ -8,7 +8,7 @@ import { styles } from "../../utils"
 
 const HeaderWrapper = styled.div`
   grid-area: header;
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,21 +18,12 @@ const HeaderWrapper = styled.div`
 `
 
 class Header extends React.Component {
-  state = {
-    isOpen: false,
-  }
-
-  handleNavbar = () => {
-    this.setState({ isOpen: !this.state.isOpen })
-  }
-
   render() {
     const { navcolor, logocolor } = this.props
-    const { isOpen } = this.state
     return (
       <HeaderWrapper>
-        <NavbarHeader logocolor={logocolor} handleNavbar={this.handleNavbar} />
-        <NavbarLinks navcolor={navcolor} isOpen={isOpen} />
+        <NavbarHeader logocolor={logocolor} />
+        <NavbarLinks navcolor={navcolor} />
       </HeaderWrapper>
     )
   }
