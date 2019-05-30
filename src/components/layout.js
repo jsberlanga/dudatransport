@@ -164,6 +164,8 @@ const PagesContainer = styled.div`
       "main main main" auto
       "footer footer footer" auto;
   }
+
+  min-height: 150vh;
 `
 
 const PagesLayout = ({ children, url, background, color }) => (
