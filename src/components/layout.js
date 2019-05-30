@@ -25,7 +25,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.7;
     font-size: 1.2rem;
     font-family: 'Lora', serif;
-    background: ${props => props.background};
+    background: ${props => props.background} linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(225, 225, 225, 1) 100%
+  );
     background-color: ${styles.colors.mainLight};
     color: ${props => props.color};
   }
@@ -45,8 +49,7 @@ const GlobalStyle = createGlobalStyle`
   h5 {
     font-weight: 400;
     line-height: 1.15;
-    font-family: 'Domine', serif;
-    letter-spacing: 1.4px;
+    letter-spacing: 1px;
   }
 
   h1 {

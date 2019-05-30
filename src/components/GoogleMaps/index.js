@@ -41,15 +41,18 @@ export class MapContainer extends Component {
           lng: 20.051724,
         }}
       >
-        <Marker onClick={this.onMarkerClick} name={"Duda Transport"} />
+        <Marker onClick={this.onMarkerClick} name={"Andrzej Duda Transport"} />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
           <div>
-            <h5>{this.state.selectedPlace.name}</h5>
-            <p>Milocice 136, Slomniki, Poland, 32-090</p>
+            <h4 style={{ margin: "1rem" }}>{this.state.selectedPlace.name}</h4>
+            <p style={{ fontSize: "1rem" }}>Milocice 136, Slomniki</p>
+            <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
+              32-090, Poland
+            </p>
           </div>
         </InfoWindow>
       </Map>

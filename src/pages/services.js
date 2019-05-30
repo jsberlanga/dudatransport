@@ -78,7 +78,7 @@ const ServicesWrapper = styled.div`
     .card {
       display: grid;
       grid-template-columns: minmax(5rem, 1fr) 3fr;
-      min-height: 20rem;
+      min-height: 15rem;
       border: 2px solid ${styles.colors.lightGray};
 
       @media (max-width: 768px) {
@@ -105,7 +105,7 @@ const ServicesWrapper = styled.div`
     .card-image {
       opacity: 0.9;
       font-size: 3rem;
-      margin-top: 3rem;
+      margin-top: 5rem;
     }
   }
 
@@ -226,7 +226,7 @@ const ServicesPage = () => (
               <div className="card-info">
                 <h3 className="card-title">DOCUMENTS</h3>
                 <p className="card-description">
-                  We have the necessary permits, licenses and certificates
+                  We have all the necessary permits, licenses and certificates
                   confirming our competence and attention to areas such as
                   quality management.
                 </p>

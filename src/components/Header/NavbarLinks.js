@@ -16,10 +16,27 @@ const NavbarWrapper = styled.ul`
     transition: all 0.2s;
     color: ${props => props.navcolor};
     cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2.5px;
+      bottom: -0.5rem;
+      left: 0;
+      background-color: ${props =>
+        props.navcolor ? props.navcolor : "#f6f5f5"};
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
     &:hover {
-      transform: scale(1.1);
-      border-bottom: 1.4px solid ${props => props.navcolor};
-      font-weight: 700;
+      transform: translateY(-2.5px) scale(1.05);
     }
   }
 
@@ -35,7 +52,7 @@ const NavbarWrapper = styled.ul`
     }
     h5 {
       font-size: 1.35rem;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
     }
   }
 `

@@ -39,12 +39,15 @@ const ServicesWrapper = styled.div`
     border: 1px solid ${styles.colors.brown};
   }
   .link:hover {
-    border: 2px solid ${styles.colors.brown};
+    border: 1.2px solid ${styles.colors.brown};
   }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    margin: 0 4rem;
+    margin: 0 3rem;
+  }
+  @media (max-width: 360px) {
+    margin: 0 1rem;
   }
 `
 
