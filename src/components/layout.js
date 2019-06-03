@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.15;
     letter-spacing: 1px;
+    
   }
 
   h1 {

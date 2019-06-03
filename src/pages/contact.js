@@ -50,6 +50,8 @@ const ContactWrapper = styled.div`
     .title > h1 {
       letter-spacing: 0.25em;
       font-family: "montserrat-800";
+      background-image: linear-gradient(0deg, red 50%, transparent 50%);
+      display: inline;
     }
     .title > p {
       letter-spacing: 1px;

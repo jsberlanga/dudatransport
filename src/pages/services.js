@@ -95,10 +95,6 @@ const ServicesWrapper = styled.div`
     color: ${styles.colors.blue};
     transition: all 0.3s;
 
-    &:hover {
-      background: ${styles.colors.blue};
-      color: ${styles.colors.mainLight};
-    }
     @media (max-width: 768px) {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
@@ -106,6 +102,13 @@ const ServicesWrapper = styled.div`
       opacity: 0.9;
       font-size: 3rem;
       margin-top: 5rem;
+    }
+  }
+
+  .card:hover {
+    .card-image-container {
+      background: ${styles.colors.blue};
+      color: ${styles.colors.mainLight};
     }
   }
 
