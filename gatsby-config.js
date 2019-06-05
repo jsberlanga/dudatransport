@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Andzrej Duda Transport`,
-    description: ` AndzrejDuda Transport | Express Transport`,
-    author: `Julio Soto`,
+    title: `Andrzej Duda Transport & Logistics`,
+    description: `Andrzej Duda Transport & Logistics | Express Transport | Miłocice 136, 32-090 Słomniki | tel. +48 604247966 | dudatransport.com`,
+    author: `juliosoto.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
