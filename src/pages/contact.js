@@ -123,7 +123,7 @@ const ContactPage = () => (
           </p>
           <p>
             <img src={envelope} alt="email" />
-            dudatransport@gmail.com
+            dudatransport5@gmail.com
           </p>
           <p>
             <img src={phone} alt="phone" />

@@ -108,13 +108,13 @@ const Footer = () => (
         </li>
         <li>
           <FaRegEnvelope />
-          dudatransport@gmail.com
+          dudatransport5@gmail.com
         </li>
       </ul>
     </div>
     <div className="copyright text_small">
       © {date},{" "}
-      <a href="http://www.dudatransport.com/">
+      <a href="https://www.dudatransport.com/">
         dudatransport.com. All rights reserved.
       </a>
     </div>
