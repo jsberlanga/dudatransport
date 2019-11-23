@@ -69,7 +69,7 @@ const Services = () => {
           </p>
         </div>
         <Link className="link" to="/services">
-          Learn more →
+          Our services →
         </Link>
       </div>
 
@@ -88,7 +88,7 @@ const Services = () => {
           </p>
         </div>
         <Link className="link" to="/services">
-          Learn more →
+          Our services →
         </Link>
       </div>
 
@@ -106,7 +106,7 @@ const Services = () => {
           </p>
         </div>
         <Link className="link" to="/services">
-          Learn more →
+          Our services →
         </Link>
       </div>
     </ServicesWrapper>
