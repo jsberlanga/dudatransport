@@ -86,7 +86,7 @@ const About = () => {
           </p>
         </div>
         <Link className="link" to="/services">
-          More details →
+          More details of our services →
         </Link>
       </div>
     </AboutWrapper>
