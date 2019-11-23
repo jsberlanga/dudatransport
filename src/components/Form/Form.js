@@ -89,24 +89,28 @@ class Form extends React.Component {
         <p>{this.props.subtitle}</p>
         <input type="hidden" name="form-name" value="contact" />
         <input
+          aria-label="name"
           name="name"
           placeholder="Name*"
           type="text"
           onChange={this.handleChange}
         />
         <input
+          aria-label="email"
           name="email"
           placeholder="Email*"
           type="email"
           onChange={this.handleChange}
         />
         <input
+          aria-label="phone"
           name="phone"
           placeholder="Phone Number*"
           type="text"
           onChange={this.handleChange}
         />
         <textarea
+          aria-label="message"
           name="message"
           placeholder="Message*"
           onChange={this.handleChange}
