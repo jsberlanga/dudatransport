@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { navigateTo } from "gatsby-link"
+import { navigate } from "gatsby-link"
 
 import { styles, Button } from "../../utils/"
 
@@ -31,8 +31,10 @@ const FormWrapper = styled.form`
   textarea {
     background: rgba(223, 226, 226, 0.6);
     color: ${styles.colors.mainLight};
+    font-size: 1.1rem;
+    font-weight: 300;
     ::placeholder {
-      color: ${styles.colors.mainLight};
+      color: rgba(80, 80, 80, 0.7);
       font-size: 1.1rem;
       @media (max-width: 768px) {
         font-size: 0.9rem;
@@ -58,7 +60,6 @@ function encode(data) {
 class Form extends React.Component {
   state = {}
   handleSubmit = e => {
-    console.log(e)
     e.preventDefault()
     const form = e.target
     fetch("/", {
@@ -69,8 +70,8 @@ class Form extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigateTo(form.getAttribute("action")))
-      .catch(error => alert(error))
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => console.log(error))
   }
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
@@ -89,25 +90,33 @@ class Form extends React.Component {
         <p>{this.props.subtitle}</p>
         <input type="hidden" name="form-name" value="contact" />
         <input
+          aria-label="name"
           name="name"
           placeholder="Name*"
           type="text"
+          required
           onChange={this.handleChange}
         />
         <input
+          aria-label="email"
           name="email"
           placeholder="Email*"
           type="email"
+          required
           onChange={this.handleChange}
         />
         <input
+          aria-label="phone"
           name="phone"
-          placeholder="Phone Number*"
+          placeholder="Phone Number"
           type="text"
           onChange={this.handleChange}
         />
         <textarea
+          aria-label="message"
           name="message"
+          minLength="10"
+          maxLength="200"
           placeholder="Message*"
           onChange={this.handleChange}
         />

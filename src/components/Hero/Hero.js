@@ -37,7 +37,7 @@ const Hero = () => (
       Guaranteed by years of experience and customer delight.
     </p>
     <Button style={{ marginTop: "0.7em" }}>
-      <Link to="/services">Learn more</Link>
+      <Link to="/services">Check our Services</Link>
     </Button>
   </HeroWrapper>
 )
