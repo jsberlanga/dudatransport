@@ -8,7 +8,7 @@ const MapWrapper = styled.div`
   grid-area: map;
 
   background: ${styles.colors.mainLight};
-  margin: 3rem auto;
+  margin: 1rem auto;
   text-align: center;
   display: grid;
   grid-template-columns: 2.5fr 2fr;
