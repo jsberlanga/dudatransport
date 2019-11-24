@@ -7,8 +7,8 @@ const HeroWrapper = styled.div`
   grid-area: hero;
   display: flex;
   @media (max-width: 1130px) {
-    max-height: 35rem;
-    min-height: 25rem;
+    max-height: 38rem;
+    min-height: 28rem;
   }
 `
 
