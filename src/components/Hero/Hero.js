@@ -36,7 +36,7 @@ const Hero = () => (
     <p style={{ fontStyle: "italic" }}>
       Guaranteed by years of experience and customer delight.
     </p>
-    <Button style={{ marginTop: "0.7em" }}>
+    <Button style={{ marginTop: "0.7em", zIndex: 999 }}>
       <Link to="/services">Check our Services</Link>
     </Button>
   </HeroWrapper>
