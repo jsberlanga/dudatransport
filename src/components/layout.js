@@ -152,7 +152,7 @@ const PagesContainer = styled.div`
   display: grid;
   grid-template:
     ". header header ." auto
-    "main main main main" minmax(22.6em, 1fr)
+    "main main main main" minmax(35em, 1fr)
     "footer footer footer footer" auto
     / 1fr minmax(20em, 5fr) minmax(20em, 3fr) 1fr;
   animation: ${opacity} 1.5s ease-out;
