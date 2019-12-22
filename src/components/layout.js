@@ -88,6 +88,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     text-decoration: none;
+    color: ${styles.colors.mainLight};
   }
   input, button, textarea {
     font-family: 'Lora', serif;
