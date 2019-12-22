@@ -36,6 +36,10 @@ const Button = styled.button`
   @media (max-width: 768px) {
     font-size: 0.95rem;
   }
+
+  a {
+    color: ${styles.colors.mainLight};
+  }
 `
 
 export { Button }
