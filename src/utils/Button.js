@@ -11,6 +11,7 @@ const Button = styled.button`
   transition: all 0.2s;
   position: relative;
   z-index: 1;
+  font-size: 1.2rem;
   &::after {
     content: "";
     position: absolute;
@@ -21,7 +22,6 @@ const Button = styled.button`
     top: 0;
     transition: transform 0.3s;
     z-index: -1;
-    font-size: 1.2rem;
   }
   &::after {
     transform: scaleX(0);
