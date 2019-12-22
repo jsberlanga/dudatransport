@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { styles } from "./index"
 
 const Button = styled.button`
-  all: unset;
+  border: none;
   cursor: pointer;
-  padding: 0.8rem 3rem;
+  padding: 1rem 3.2rem;
   color: ${styles.colors.mainLight};
   background: ${styles.colors.blue};
   letter-spacing: 1px;
@@ -21,6 +21,7 @@ const Button = styled.button`
     top: 0;
     transition: transform 0.3s;
     z-index: -1;
+    font-size: 1.2rem;
   }
   &::after {
     transform: scaleX(0);
@@ -30,6 +31,10 @@ const Button = styled.button`
   &:hover::after {
     transform: scaleX(1);
     transform-origin: top left;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
   }
 `
 
