@@ -6,10 +6,12 @@ const NavbarWrapper = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+
   .nav-link {
     display: flex;
     padding: 1rem;
   }
+
   h5 {
     font-size: 1.1rem;
     letter-spacing: 0px;
@@ -18,6 +20,7 @@ const NavbarWrapper = styled.ul`
     cursor: pointer;
     position: relative;
     transition: all 0.3s;
+
     &:before {
       content: "";
       position: absolute;
@@ -31,10 +34,12 @@ const NavbarWrapper = styled.ul`
       transform-origin: right;
       transition: transform 0.3s;
     }
+
     &:hover::before {
       transform: scaleX(1);
       transform-origin: left;
     }
+
     &:hover {
       transform: translateY(-2.5px) scale(1.05);
     }
@@ -50,6 +55,7 @@ const NavbarWrapper = styled.ul`
       background-color: transparent;
       width: auto;
     }
+
     h5 {
       font-size: 1.35rem;
       margin: 0 1.5rem;

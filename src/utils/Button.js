@@ -4,14 +4,14 @@ import { styles } from "./index"
 const Button = styled.button`
   border: none;
   cursor: pointer;
-  padding: 1rem 3.2rem;
+  padding: 1.2rem 3.2rem;
   color: ${styles.colors.mainLight};
   background: ${styles.colors.blue};
   letter-spacing: 1px;
-  transition: all 0.2s;
   position: relative;
-  z-index: 1;
   font-size: 1.2rem;
+  min-height: 4rem;
+
   &::after {
     content: "";
     position: absolute;
@@ -21,9 +21,6 @@ const Button = styled.button`
     left: 0;
     top: 0;
     transition: transform 0.3s;
-    z-index: -1;
-  }
-  &::after {
     transform: scaleX(0);
     transform-origin: bottom right;
   }
@@ -34,7 +31,7 @@ const Button = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   a {
