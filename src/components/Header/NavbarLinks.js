@@ -14,7 +14,7 @@ const NavbarWrapper = styled.ul`
     font-size: 1.1rem;
     letter-spacing: 0px;
     transition: all 0.2s;
-    color: ${props => props.navcolor};
+    color: ${props => (props.navcolor ? props.navcolor : "#f6f5f5")};
     cursor: pointer;
     position: relative;
     transition: all 0.3s;
@@ -57,24 +57,27 @@ const NavbarWrapper = styled.ul`
   }
 `
 
-const NavbarLinks = ({ navcolor }) => (
-  <NavbarWrapper navcolor={navcolor}>
-    <li>
-      <Link to="/" className="nav-link">
-        <h5>Home</h5>
-      </Link>
-    </li>
-    <li>
-      <Link to="/services" className="nav-link">
-        <h5>Our Services</h5>
-      </Link>
-    </li>
-    <li>
-      <Link to="/contact" className="nav-link">
-        <h5>Find Us</h5>
-      </Link>
-    </li>
-  </NavbarWrapper>
-)
+const NavbarLinks = ({ navcolor }) => {
+  console.log(navcolor)
+  return (
+    <NavbarWrapper navcolor={navcolor}>
+      <li>
+        <Link to="/" className="nav-link">
+          <h5>Home</h5>
+        </Link>
+      </li>
+      <li>
+        <Link to="/services" className="nav-link">
+          <h5>Our Services</h5>
+        </Link>
+      </li>
+      <li>
+        <Link to="/contact" className="nav-link">
+          <h5>Find Us</h5>
+        </Link>
+      </li>
+    </NavbarWrapper>
+  )
+}
 
 export default NavbarLinks

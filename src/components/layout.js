@@ -86,8 +86,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    all: unset;
     cursor: pointer;
+    text-decoration: none;
   }
   input, button, textarea {
     font-family: 'Lora', serif;
