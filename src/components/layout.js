@@ -25,13 +25,16 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.7;
     font-size: 1.2rem;
     font-family: 'Lora', serif;
-    background: ${props => props.background} linear-gradient(
-    180deg,
-    rgba(245, 245, 245, 1) 0%,
-    rgba(225, 225, 225, 1) 100%
-  );
     background-color: ${styles.colors.mainLight};
     color: ${props => props.color};
+    
+    @media(min-width:1200px) {
+      background: ${props => props.background} linear-gradient(
+      180deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(225, 225, 225, 1) 100%
+    );
+    }
   }
 
   html, body {
