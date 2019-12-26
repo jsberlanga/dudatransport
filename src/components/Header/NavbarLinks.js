@@ -64,7 +64,6 @@ const NavbarWrapper = styled.ul`
 `
 
 const NavbarLinks = ({ navcolor }) => {
-  console.log(navcolor)
   return (
     <NavbarWrapper navcolor={navcolor}>
       <li>

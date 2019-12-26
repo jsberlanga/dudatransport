@@ -17,16 +17,11 @@ const HeaderWrapper = styled.div`
   z-index: 999;
 `
 
-class Header extends React.Component {
-  render() {
-    const { navcolor, logocolor } = this.props
-    return (
-      <HeaderWrapper>
-        <NavbarHeader logocolor={logocolor} />
-        <NavbarLinks navcolor={navcolor} />
-      </HeaderWrapper>
-    )
-  }
-}
+const Header = ({ navcolor, logocolor }) => (
+  <HeaderWrapper>
+    <NavbarHeader logocolor={logocolor} />
+    <NavbarLinks navcolor={navcolor} />
+  </HeaderWrapper>
+)
 
 export default Header

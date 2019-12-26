@@ -32,21 +32,14 @@ const NavbarHeaderWrapper = styled.div`
   }
 `
 
-const Logo = ({ logocolor }) => {
-  if (logocolor === "light") {
-    return (
-      <Link to="/">
-        <LogoWrapper src={logoLight} alt="logo" />
-      </Link>
-    )
-  } else {
-    return (
-      <Link to="/">
-        <LogoWrapper src={logoDark} alt="logo" />
-      </Link>
-    )
-  }
-}
+const Logo = ({ logocolor }) => (
+  <Link to="/">
+    <LogoWrapper
+      src={logocolor === "light" ? logoLight : logoDark}
+      alt="logo"
+    />
+  </Link>
+)
 
 const NavbarHeader = ({ logocolor }) => (
   <NavbarHeaderWrapper>
