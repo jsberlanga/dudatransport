@@ -9,7 +9,7 @@ const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   margin: 3em auto;
-  height: 80vh;
+  min-height: 80vh;
   background-color: rgba(33, 33, 33, 0.7);
   padding: 1em 3em 2em;
   border-radius: 0.2rem;

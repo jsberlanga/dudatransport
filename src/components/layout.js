@@ -138,7 +138,6 @@ const Container = styled.div`
       "about about about" minmax(130vh, 1fr)
       ". form ." auto
       "footer footer footer" auto;
-    height: 100vh;
     text-align: center;
   }
   .main-image {
