@@ -33,6 +33,7 @@
     "@testing-library/user-event": "^8.0.2",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.26",
+    "husky": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-axe": "^3.2.0",
@@ -50,7 +51,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest --env=jsdom",
-    "test:watch": "jest --env=jsdom --watch"
+    "test:watch": "jest --env=jsdom --watch",
+    "test:all": "jest --env=jsdom --watchAll"
   },
   "repository": {
     "type": "git",
@@ -58,5 +60,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }
