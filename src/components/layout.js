@@ -91,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     cursor: pointer;
     text-decoration: none;
-    color: ${styles.colors.mainLight};
+    color: unset;
   }
   input, button, textarea {
     font-family: 'Lora', serif;
@@ -143,7 +143,7 @@ const Container = styled.div`
   .main-image {
     width: 100%;
     position: absolute;
-    z-index: -999;
+    z-index: -1;
     @media (max-width: 768px) {
       width: 1000px;
       margin-left: -3rem;

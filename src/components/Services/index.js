@@ -24,7 +24,6 @@ const ServicesWrapper = styled.div`
       margin: 1rem 0;
     }
     .subtitle {
-      text-align: justify;
       margin: 2rem 1rem;
     }
   }
@@ -44,7 +43,7 @@ const ServicesWrapper = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    margin: 0 3rem;
+    margin: 0 2rem;
   }
   @media (max-width: 360px) {
     margin: 0 1rem;

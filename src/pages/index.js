@@ -9,15 +9,13 @@ import Map from "../components/Map"
 import Services from "../components/Services"
 import About from "../components/About"
 import Footer from "../components/Footer"
-
 import HomeLayout from "../components/layout"
-
 import homeImage from "../images/hero-modified.jpg"
 
 const IndexPage = () => (
   <HomeLayout url={homeImage}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Header logocolor="light" />
+    <Header headerColor="light" />
     <Hero />
     <Form
       title="Enquire Now"

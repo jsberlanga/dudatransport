@@ -19,7 +19,7 @@ const NotFoundPage = () => (
     color={styles.colors.darkGray}
   >
     <SEO title="404: Not found" />
-    <Header navcolor={styles.colors.blue} logocolor="dark" />
+    <Header headerColor="dark" />
     <Wrapper style={{ gridArea: "main" }}>
       <h1>Sorry, not found</h1>
       <p>You just hit a route that doesn&#39;t exist...</p>

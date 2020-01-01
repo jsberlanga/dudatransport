@@ -8,7 +8,7 @@ const MapWrapper = styled.div`
   grid-area: map;
 
   background: ${styles.colors.mainLight};
-  margin: 0 auto;
+  margin: -2rem auto 2rem;
   text-align: center;
   display: grid;
   grid-template-columns: 2.5fr 2fr;
@@ -28,8 +28,11 @@ const MapWrapper = styled.div`
       margin-top: 3rem;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1130px) {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 425px) {
+    max-width: 100vw;
   }
 `
 
