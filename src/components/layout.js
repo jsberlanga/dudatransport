@@ -1,6 +1,5 @@
 import React from "react"
 import styled, { createGlobalStyle, keyframes } from "styled-components"
-
 import { styles } from "../utils"
 
 import MyFont from "../static/fonts/montserrat-800.woff"
@@ -179,17 +178,18 @@ const PagesLayout = ({ children, url, background, color }) => (
   </>
 )
 
-const HomeLayout = ({ children, url }) => (
-  <>
-    <GlobalStyle />
-
-    <Container url={url}>
-      <div className="main-image">
-        <MainImage />
-      </div>
-      {children}
-    </Container>
-  </>
-)
+const HomeLayout = ({ children, url }) => {
+  return (
+    <>
+      <GlobalStyle />
+      <Container url={url}>
+        <div className="main-image">
+          <MainImage />
+        </div>
+        {children}
+      </Container>
+    </>
+  )
+}
 
 export { HomeLayout as default, PagesLayout }
