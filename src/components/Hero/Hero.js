@@ -17,15 +17,23 @@ const HeroWrapper = styled.div`
   p {
     font-size: 1.4rem;
   }
+
+  @media (max-width: 1130px) {
+    margin: 6.5em auto;
+  }
+
   @media (max-width: 768px) {
     padding: 0 1.4rem;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 425px) {
+    margin: 4em auto 7em;
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 1.75rem;
     }
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 1.75rem;
     }
   }
 `
@@ -36,7 +44,7 @@ const Hero = () => (
     <p style={{ fontStyle: "italic" }}>
       Guaranteed by years of experience and customer delight.
     </p>
-    <Button style={{ marginTop: "0.7em", zIndex: 999 }}>
+    <Button style={{ marginTop: "0.7em" }}>
       <Link to="/services">Check our Services</Link>
     </Button>
   </HeroWrapper>

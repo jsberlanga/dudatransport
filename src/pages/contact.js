@@ -109,7 +109,7 @@ const ContactPage = () => (
   >
     <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
 
-    <Header navcolor={styles.colors.blue} logocolor="dark" />
+    <Header headerColor="dark" />
     <ContactWrapper style={{ gridArea: "main" }}>
       <div className="info">
         <div className="title">

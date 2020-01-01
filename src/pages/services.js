@@ -101,7 +101,10 @@ const ServicesWrapper = styled.div`
     .card-image {
       opacity: 0.9;
       font-size: 3rem;
-      margin-top: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -143,7 +146,6 @@ const ServicesWrapper = styled.div`
     &:hover {
       filter: grayscale(00%);
       transform: scale(1.15);
-      z-index: 1;
     }
   }
   .images .info {
@@ -166,7 +168,7 @@ const ServicesPage = () => (
     color={styles.colors.darkGray}
   >
     <SEO title="Services" keywords={[`gatsby`, `application`, `react`]} />
-    <Header navcolor={styles.colors.blue} logocolor="dark" />
+    <Header headerColor="dark" />
     <ServicesWrapper style={{ gridArea: "main" }}>
       <div className="info">
         <div className="title">

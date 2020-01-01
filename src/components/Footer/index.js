@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { styles } from "../../utils"
 
-import logo from "../../images/logo.svg"
+import logo from "../../images/logo-light.svg"
 
 import { FaRegEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
 

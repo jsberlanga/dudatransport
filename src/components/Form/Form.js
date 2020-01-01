@@ -8,12 +8,16 @@ const FormWrapper = styled.form`
   color: ${styles.colors.mainLight};
   display: flex;
   flex-direction: column;
-  margin: 3em auto;
-  min-height: 80vh;
+  margin: 1em auto;
+  max-height: 560px;
   background-color: rgba(33, 33, 33, 0.7);
   padding: 1em 3em 2em;
   border-radius: 0.2rem;
   position: relative;
+
+  @media (max-width: 425px) {
+    width: 95vw;
+  }
 
   p {
     font-style: italic;

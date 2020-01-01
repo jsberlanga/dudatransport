@@ -57,7 +57,11 @@ const AboutWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
-    margin: 2rem 0.7rem;
+    margin: 2rem auto;
+  }
+
+  @media (max-width: 425px) {
+    width: 95vw;
   }
 `
 

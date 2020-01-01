@@ -16,7 +16,7 @@ import { styles } from "../utils"
 const Image = styled.div`
   width: 100%;
   position: absolute;
-  z-index: -999;
+  z-index: -1;
   filter: opacity(80%);
   @media (max-width: 768px) {
     width: 768px;
@@ -52,7 +52,7 @@ const ThanksWrapper = styled.div`
 const ThanksPage = () => (
   <PagesLayout url={thanksImage}>
     <SEO title="Thank You" keywords={[`gatsby`, `application`, `react`]} />
-    <Header logocolor="light" />
+    <Header headerColor="light" />
     <Image>
       <ThanksImage />
     </Image>
