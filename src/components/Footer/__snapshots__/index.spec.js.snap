@@ -104,7 +104,7 @@ exports[`<Footer /> renders correctly 1`] = `
       class="copyright text_small"
     >
       © 
-      2019
+      2020
       ,
        
       <a
