@@ -1,27 +1,50 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
-import NavbarHeader from "./NavbarHeader"
-import NavbarLinks from "./NavbarLinks"
+import Logo from "./Logo"
+import Links from "./Links"
+import Hamburger from "./Hamburger"
+import FullScreenMenu from "./FullScreenMenu"
 
 import { styles } from "../../utils"
 
 const HeaderWrapper = styled.div`
   grid-area: header;
-  @media (min-width: 640px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  color: ${styles.colors.mainLight};
-  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.35rem;
+  color: ${props =>
+    props.headerColor === "light"
+      ? styles.colors.mainLight
+      : styles.colors.blue};
 `
 
-const Header = ({ navcolor, logocolor }) => (
-  <HeaderWrapper>
-    <NavbarHeader logocolor={logocolor} />
-    <NavbarLinks navcolor={navcolor} />
-  </HeaderWrapper>
-)
+const Header = ({ headerColor }) => {
+  const [isMenuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(isMenuOpen => !isMenuOpen)
+  }
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.documentElement.style.overflowY = "hidden"
+    } else {
+      document.documentElement.style.overflowY = "auto"
+    }
+  }, [isMenuOpen])
+
+  if (isMenuOpen) {
+    return <FullScreenMenu toggleMenu={toggleMenu} />
+  }
+  return (
+    <HeaderWrapper headerColor={headerColor}>
+      <Logo headerColor={headerColor} />
+      <Links headerColor={headerColor} />
+      <Hamburger isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+    </HeaderWrapper>
+  )
+}
 
 export default Header
