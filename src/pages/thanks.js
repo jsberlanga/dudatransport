@@ -51,7 +51,16 @@ const ThanksWrapper = styled.div`
 `
 const ThanksPage = () => (
   <PagesLayout url={thanksImage}>
-    <SEO title="Thank You" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Thank You"
+      keywords={[
+        `andrzej duda`,
+        `duda transport`,
+        `transport & logistics`,
+        `express transport`,
+        `Miłocice 136, 32-090 Słomniki`,
+      ]}
+    />
     <Header headerColor="light" />
     <Image>
       <ThanksImage />
