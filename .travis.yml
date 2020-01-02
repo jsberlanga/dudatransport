@@ -12,9 +12,9 @@ before_deploy:
   - npm install netlify-cli -g
   - npm run build
 
-deploy:
-  provider: netlify
+# deploy:
+#   provider: netlify
 #   script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
-  skip_cleanup: true
-  on:
-    branch: master
+#   skip_cleanup: true
+#   on:
+#     branch: master
