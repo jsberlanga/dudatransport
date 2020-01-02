@@ -8,8 +8,8 @@ const FormWrapper = styled.form`
   color: ${styles.colors.mainLight};
   display: flex;
   flex-direction: column;
-  margin: 1em auto;
-  max-height: 560px;
+  margin: 1.5em auto;
+  max-height: 600px;
   background-color: rgba(33, 33, 33, 0.7);
   padding: 1em 3em 2em;
   border-radius: 0.2rem;
