@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby-link"
 
@@ -80,15 +80,17 @@ function encode(data) {
     .join("&")
 }
 
-class Form extends React.Component {
-  state = {}
-  handleSubmit = e => {
-    const { name, email, message } = this.state
+const Form = props => {
+  const [value, setValue] = useState({ name: "", email: "", message: "" })
+  const [error, setError] = useState("")
+
+  const handleSubmit = e => {
+    const { name, email, message } = value
 
     e.preventDefault()
     const form = e.target
     if (!name || !email || !message) {
-      this.setState({ error: "Please fill out the form." })
+      setError("Please fill out the form.")
       return
     }
     fetch("/", {
@@ -96,69 +98,67 @@ class Form extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...this.state,
+        ...value,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => console.log(error))
   }
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+  const handleChange = e => {
+    setError("")
+    setValue({ ...value, [e.target.name]: e.target.value })
   }
-  render() {
-    const { error } = this.state
-    return (
-      <>
-        <FormWrapper
-          name="contact"
-          method="post"
-          action="/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-        >
-          {error ? (
-            <p className="error" role="alert">
-              {error}
-            </p>
-          ) : null}
-          <h2>{this.props.title}</h2>
-          <p>{this.props.subtitle}</p>
-          <input type="hidden" name="form-name" value="contact" />
-          <input
-            aria-label="name"
-            name="name"
-            placeholder="Name*"
-            type="text"
-            onChange={this.handleChange}
-          />
-          <input
-            aria-label="email"
-            name="email"
-            placeholder="Email*"
-            type="email"
-            onChange={this.handleChange}
-          />
-          <input
-            aria-label="phone"
-            name="phone"
-            placeholder="Phone Number"
-            type="text"
-            onChange={this.handleChange}
-          />
-          <textarea
-            aria-label="message"
-            name="message"
-            minLength="10"
-            maxLength="200"
-            placeholder="Message*"
-            onChange={this.handleChange}
-          />
-          <Button type="submit">Send</Button>
-        </FormWrapper>
-      </>
-    )
-  }
+  return (
+    <>
+      <FormWrapper
+        name="contact"
+        method="post"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+      >
+        {error ? (
+          <p className="error" role="alert">
+            {error}
+          </p>
+        ) : null}
+        <h2>{props.title}</h2>
+        <p>{props.subtitle}</p>
+        <input type="hidden" name="form-name" value="contact" />
+        <input
+          aria-label="name"
+          name="name"
+          placeholder="Name*"
+          type="text"
+          onChange={handleChange}
+        />
+        <input
+          aria-label="email"
+          name="email"
+          placeholder="Email*"
+          type="email"
+          onChange={handleChange}
+        />
+        <input
+          aria-label="phone"
+          name="phone"
+          placeholder="Phone Number"
+          type="text"
+          onChange={handleChange}
+        />
+        <textarea
+          aria-label="message"
+          name="message"
+          minLength={10}
+          maxLength={200}
+          placeholder="Message*"
+          onChange={handleChange}
+        />
+        <Button type="submit">Send</Button>
+      </FormWrapper>
+    </>
+  )
 }
 
 export default Form
