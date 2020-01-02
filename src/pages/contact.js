@@ -57,6 +57,9 @@ const ContactWrapper = styled.div`
       letter-spacing: 1px;
       font-style: italic;
     }
+    .details {
+      margin-bottom: 1.4em;
+    }
     .details > p {
       padding-bottom: 1em;
       letter-spacing: 1px;
@@ -69,6 +72,7 @@ const ContactWrapper = styled.div`
     .map {
       height: 25em;
       left: 10%;
+      margin-bottom: 1.4em;
     }
   }
 
