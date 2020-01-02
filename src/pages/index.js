@@ -14,7 +14,16 @@ import homeImage from "../images/hero-modified.jpg"
 
 const IndexPage = () => (
   <HomeLayout url={homeImage}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[
+        `andrzej duda`,
+        `duda transport`,
+        `transport & logistics`,
+        `express transport`,
+        `Miłocice 136, 32-090 Słomniki`,
+      ]}
+    />
     <Header headerColor="light" />
     <Hero />
     <Form

@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Andrzej Duda Transport & Logistics`,
-    description: `Andrzej Duda Transport & Logistics | Express Transport | Miłocice 136, 32-090 Słomniki | tel. +48 604247966 | dudatransport.com`,
-    author: `juliosoto.dev`,
+    description: `Andrzej Duda Transport & Logistics is one of Poland's leading transport companies. Its strong market position lies in the freight transport, contract logistics and overland businesses.`,
+    url: `https://dudatransport.com`,
+    author: `Julio Soto | juliosoto.dev`,
+    twitterUsername: `@jsberlanga`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

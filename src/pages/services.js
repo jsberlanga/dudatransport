@@ -167,7 +167,17 @@ const ServicesPage = () => (
     background={styles.colors.mainLight}
     color={styles.colors.darkGray}
   >
-    <SEO title="Services" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Services"
+      keywords={[
+        `andrzej duda`,
+        `duda transport`,
+        `transport & logistics`,
+        `express transport`,
+        `duda transport services`,
+        `Miłocice 136, 32-090 Słomniki`,
+      ]}
+    />
     <Header headerColor="dark" />
     <ServicesWrapper style={{ gridArea: "main" }}>
       <div className="info">

@@ -111,7 +111,17 @@ const ContactPage = () => (
     background={styles.colors.lightGray}
     color={styles.colors.darkGray}
   >
-    <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Contact"
+      keywords={[
+        `andrzej duda`,
+        `duda transport`,
+        `transport & logistics`,
+        `express transport`,
+        `contact duda transport`,
+        `Miłocice 136, 32-090 Słomniki`,
+      ]}
+    />
 
     <Header headerColor="dark" />
     <ContactWrapper style={{ gridArea: "main" }}>
