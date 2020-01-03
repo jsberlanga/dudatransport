@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { styles, Button } from "../../utils/"
+import { styles, hoverEffect } from "../../utils/"
 
 const HeroWrapper = styled.div`
+  min-height: 50vh;
   color: ${styles.colors.mainLight};
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10em auto;
+  margin: 25vh auto 12.5vh;
   h1 {
     font-size: 3.2rem;
     text-transform: uppercase;
@@ -18,15 +19,7 @@ const HeroWrapper = styled.div`
     font-size: 1.4rem;
   }
 
-  @media (max-width: 1130px) {
-    margin: 6.5em auto;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 1.4rem;
-  }
   @media (max-width: 425px) {
-    margin: 4em auto 7em;
     h1 {
       font-size: 2.8rem;
       margin-bottom: 1.75rem;
@@ -36,6 +29,20 @@ const HeroWrapper = styled.div`
       margin-bottom: 1.75rem;
     }
   }
+
+  a {
+    background: ${styles.colors.blue};
+    color: ${styles.colors.mainLight};
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    min-height: 4rem;
+    padding: 1.2rem 3.2rem;
+    z-index: 2;
+    margin-top: 0.7rem;
+
+    ${hoverEffect()};
+  }
 `
 
 const Hero = () => (
@@ -44,9 +51,7 @@ const Hero = () => (
     <p style={{ fontStyle: "italic" }}>
       Guaranteed by years of experience and customer delight.
     </p>
-    <Button style={{ marginTop: "0.7em" }}>
-      <Link to="/services">Check our Services</Link>
-    </Button>
+    <Link to="/services">Check our Services</Link>
   </HeroWrapper>
 )
 

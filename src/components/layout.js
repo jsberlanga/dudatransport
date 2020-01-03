@@ -142,8 +142,14 @@ const Container = styled.div`
   }
   .main-image {
     width: 100%;
+    min-height: 100vh;
     position: absolute;
     z-index: -1;
+
+    div {
+      position: initial !important;
+    }
+
     @media (max-width: 768px) {
       width: 1000px;
       margin-left: -3rem;

@@ -46,9 +46,11 @@ const AboutWrapper = styled.div`
       background: #915b4a;
       background: ${styles.colors.brown};
       font-weight: 400;
-
+      transition: all 0.3s;
+      border: 1px solid ${styles.colors.brown};
       &:hover {
-        background: ${styles.colors.brown2};
+        background: ${styles.colors.mainLight};
+        color: ${styles.colors.brown};
       }
     }
   }

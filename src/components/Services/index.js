@@ -36,9 +36,12 @@ const ServicesWrapper = styled.div`
     color: ${styles.colors.brown};
     font-weight: 400;
     border: 1px solid ${styles.colors.brown};
+    transition: all 0.3s;
   }
   .link:hover {
-    border: 1.2px solid ${styles.colors.brown};
+    border: 1px solid transparent;
+    background: ${styles.colors.brown2};
+    color: ${styles.colors.mainLight};
   }
 
   @media (max-width: 768px) {
