@@ -10,7 +10,8 @@ const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 25vh auto 12.5vh;
+  margin: 22.5vh 1rem 12.5vh;
+  width: 100%;
   h1 {
     font-size: 3.2rem;
     text-transform: uppercase;
