@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
-const ENGLISH = "EN"
-const POLISH = "PL"
+const ENGLISH = "ENGLISH"
+const POLISH = "POLISH"
 
 const defaultState = {
   language: ENGLISH,

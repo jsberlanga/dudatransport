@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 
 import { styles } from "../../utils"
 
-import delivery from "../../images/services/delivery.svg"
-import fast from "../../images/services/fast.svg"
-import support from "../../images/services/support.svg"
+import delivery from "../../images/icons/delivery.svg"
+import fast from "../../images/icons/fast.svg"
+import support from "../../images/icons/support.svg"
 
 const ServicesWrapper = styled.div`
   grid-area: services;

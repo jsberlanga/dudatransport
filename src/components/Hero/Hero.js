@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { styles, hoverEffect } from "../../utils/"
+import { styles, hoverEffect } from "../../utils"
 
 const HeroWrapper = styled.div`
   min-height: 50vh;

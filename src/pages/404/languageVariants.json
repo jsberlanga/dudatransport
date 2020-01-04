@@ -1,0 +1,10 @@
+{
+  "ENGLISH": {
+    "title": "Sorry, not found",
+    "body": "You just hit a route that doesn't exist..."
+  },
+  "POLISH": {
+    "title": "Przepraszam, nie ma",
+    "body": "Tego route nie ma..."
+  }
+}
