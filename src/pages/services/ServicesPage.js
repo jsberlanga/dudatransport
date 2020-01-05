@@ -1,49 +1,135 @@
 import React, { useContext } from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import styled from "styled-components"
 import languageContext from "../../context/LanguageContext"
 
 import SEO from "../../components/globals/SEO"
 import { PagesLayout } from "../../components/globals/Layout"
 import Header from "../../components/globals/Header"
 import Footer from "../../components/globals/Footer"
+import ServicesPageContent from "./ServicesPageContent"
+import { styles as globalStyles } from "../../utils"
 
-import { FaTruck, FaExchangeAlt, FaCube, FaFileSignature } from "react-icons/fa"
+const ServicesWrapper = styled.div`
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 5rem;
+  grid-area: main;
 
-const GET_TRUCKS_IMAGES = graphql`
-  {
-    truck1: file(relativePath: { eq: "trucks/truck1.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1280) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+  .title {
+    padding: 5rem 2rem;
+    margin: 0 auto;
+  }
+  .title > h1 {
+    letter-spacing: 0.25em;
+    font-family: "montserrat-800";
+  }
+  .title > p {
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  .details > p {
+    padding-bottom: 1em;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: minmax(5rem, 1fr) 3fr;
+      min-height: 15rem;
+      border: 2px solid ${globalStyles.colors.lightGray};
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 1fr;
       }
     }
-    truck2: file(relativePath: { eq: "trucks/truck2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1280) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
+  }
+
+  .card-image-container {
+    background: ${globalStyles.colors.lightGray};
+    position: relative;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    color: ${globalStyles.colors.blue};
+    transition: all 0.3s;
+
+    @media (max-width: 768px) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    truck3: file(relativePath: { eq: "trucks/truck3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1280) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
+    .card-image {
+      opacity: 0.9;
+      font-size: 3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .card:hover {
+    .card-image-container {
+      background: ${globalStyles.colors.blue};
+      color: ${globalStyles.colors.mainLight};
+    }
+  }
+
+  .card-info {
+    text-align: left;
+    margin: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -3px;
+  }
+  .card-description {
+    color: ${globalStyles.colors.gray};
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .image {
+    filter: grayscale(80%);
+    transition: all 0.3s;
+    &:hover {
+      filter: grayscale(00%);
+      transform: scale(1.15);
+    }
+  }
+  .images .info {
+    text-align: left;
+    line-height: 1.8;
+    h2 {
+      letter-spacing: -2px;
     }
   }
 `
 
-const ServicesPage = ({
-  languageVariants: { ENGLISH, POLISH },
-  globalStyles,
-  componentStyles: { ServicesWrapper, imageStyles },
-}) => {
+const ServicesPage = () => {
   const { language } = useContext(languageContext)
-
-  const selectedLanguage = language === "ENGLISH" ? ENGLISH : POLISH
 
   return (
     <PagesLayout
@@ -63,138 +149,7 @@ const ServicesPage = ({
       />
       <Header headerColor="dark" />
       <ServicesWrapper>
-        <div className="info">
-          <div className="title">
-            <h1>{selectedLanguage.services.title}</h1>
-            <p>{selectedLanguage.services.subtitle}</p>
-          </div>
-
-          <div className="details">
-            <div className="cards">
-              <div className="card card-1">
-                <div className="card-image-container">
-                  <div className="card-image">
-                    <FaExchangeAlt />
-                  </div>
-                </div>
-                <div className="card-info">
-                  <h3 className="card-title">
-                    {selectedLanguage.services.cards.card1.title}
-                  </h3>
-                  <p className="card-description">
-                    {selectedLanguage.services.cards.card1.description}
-                  </p>
-                </div>
-              </div>
-              <div className="card card-2">
-                <div className="card-image-container">
-                  <div className="card-image">
-                    <FaTruck />
-                  </div>
-                </div>
-                <div className="card-info">
-                  <h3 className="card-title">
-                    {selectedLanguage.services.cards.card2.title}
-                  </h3>
-                  <p className="card-description">
-                    {selectedLanguage.services.cards.card2.description}
-                  </p>
-                </div>
-              </div>
-              <div className="card card-3">
-                <div className="card-image-container">
-                  <div className="card-image">
-                    <FaCube />
-                  </div>
-                </div>
-                <div className="card-info">
-                  <h3 className="card-title">
-                    {selectedLanguage.services.cards.card3.title}
-                  </h3>
-                  <p className="card-description">
-                    {selectedLanguage.services.cards.card3.description}
-                  </p>
-                </div>
-              </div>
-              <div className="card card-4">
-                <div className="card-image-container">
-                  <div className="card-image">
-                    <FaFileSignature />
-                  </div>
-                </div>
-                <div className="card-info">
-                  <h3 className="card-title">
-                    {selectedLanguage.services.cards.card4.title}
-                  </h3>
-                  <p className="card-description">
-                    {selectedLanguage.services.cards.card4.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="title">
-            <h1>{selectedLanguage.fleet.title}</h1>
-            <p>{selectedLanguage.fleet.subtitle}</p>
-          </div>
-          <StaticQuery
-            query={GET_TRUCKS_IMAGES}
-            render={data => {
-              return (
-                <div className="images">
-                  <div className="image">
-                    <Img
-                      fluid={data.truck1.childImageSharp.fluid}
-                      style={imageStyles}
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>{selectedLanguage.fleet.trucks.truck1.name}</h2>
-                    <p>{selectedLanguage.fleet.trucks.truck1.dimensions}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck1.capacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck1.loadCapacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck1.palletsNumber}</p>
-                    <p style={{ fontStyle: "italic" }}>
-                      {selectedLanguage.fleet.trucks.truck1.description}
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Img
-                      fluid={data.truck2.childImageSharp.fluid}
-                      style={imageStyles}
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>{selectedLanguage.fleet.trucks.truck2.name}</h2>
-                    <p>{selectedLanguage.fleet.trucks.truck2.dimensions}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck2.capacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck2.loadCapacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck2.palletsNumber}</p>
-                    <p style={{ fontStyle: "italic" }}>
-                      {selectedLanguage.fleet.trucks.truck2.description}
-                    </p>
-                  </div>
-                  <div className="image">
-                    <Img
-                      fluid={data.truck3.childImageSharp.fluid}
-                      style={imageStyles}
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>{selectedLanguage.fleet.trucks.truck3.name}</h2>
-                    <p>{selectedLanguage.fleet.trucks.truck3.dimensions}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck3.capacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck3.loadCapacity}</p>
-                    <p>{selectedLanguage.fleet.trucks.truck3.palletsNumber}</p>
-                    <p style={{ fontStyle: "italic" }}>
-                      {selectedLanguage.fleet.trucks.truck3.description}
-                    </p>
-                  </div>
-                </div>
-              )
-            }}
-          />
-        </div>
+        <ServicesPageContent language={language} />
       </ServicesWrapper>
       <Footer />
     </PagesLayout>

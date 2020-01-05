@@ -1,19 +1,22 @@
 import React, { useContext } from "react"
+import styled from "styled-components"
 import languageContext from "../../context/LanguageContext"
 
 import { PagesLayout } from "../../components/globals/Layout"
 import SEO from "../../components/globals/SEO"
 import Header from "../../components/globals/Header"
 import Footer from "../../components/globals/Footer"
+import NotFoundPageContent from "./NotFoundPageContent"
+import { styles as globalStyles } from "../../utils"
 
-const NotFoundPage = ({
-  languageVariants: { ENGLISH, POLISH },
-  globalStyles,
-  componentStyles: { NotFoundWrapper },
-}) => {
+const NotFoundWrapper = styled.div`
+  grid-area: main;
+  margin: auto;
+  text-align: center;
+`
+
+const NotFoundPage = () => {
   const { language } = useContext(languageContext)
-
-  const selectedLanguage = language === "ENGLISH" ? ENGLISH : POLISH
 
   return (
     <PagesLayout
@@ -23,8 +26,7 @@ const NotFoundPage = ({
       <SEO title="404: Not found" />
       <Header headerColor="dark" />
       <NotFoundWrapper>
-        <h1>{selectedLanguage.title}</h1>
-        <p>{selectedLanguage.body}</p>
+        <NotFoundPageContent language={language} />
       </NotFoundWrapper>
       <Footer />
     </PagesLayout>

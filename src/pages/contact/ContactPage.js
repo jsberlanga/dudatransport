@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import styled from "styled-components"
 import LanguageContext from "../../context/LanguageContext"
 
 import { PagesLayout } from "../../components/globals/Layout"
@@ -6,20 +7,113 @@ import SEO from "../../components/globals/SEO"
 import Header from "../../components/globals/Header"
 import Footer from "../../components/globals/Footer"
 import Form from "../../components/Form"
-import GoogleMaps from "../../components/GoogleMaps"
+import ContactPageContent from "./ContactPageContent"
+import { styles as globalStyles } from "../../utils"
 
-import envelope from "../../images/icons/envelope.svg"
-import phone from "../../images/icons/phone.svg"
-import home from "../../images/icons/home.svg"
+const ContactWrapper = styled.div`
+  display: grid;
+  grid-area: main;
+  grid-template:
+    ". info ." auto
+    ". form ." auto /
+    1fr 10fr 1fr;
+  margin: auto;
+  text-align: center;
+  width: 100%;
 
-const ContactPage = ({
-  languageVariants: { ENGLISH, POLISH },
-  globalStyles,
-  componentStyles: { ContactWrapper },
-}) => {
+  .form {
+    grid-area: form;
+    form {
+      width: 60%;
+    }
+  }
+
+  .info {
+    grid-area: info;
+
+    img {
+      width: 2em;
+      margin-right: 0.7em;
+    }
+
+    .title,
+    .map {
+      position: relative;
+    }
+
+    .title {
+      padding: 5rem 2rem;
+      margin: 0 auto;
+
+      h1 {
+        letter-spacing: 0.25em;
+        font-family: "montserrat-800";
+        /* background-image: linear-gradient(0deg, red 50%, transparent 50%); */
+        display: inline;
+      }
+
+      p {
+        letter-spacing: 1px;
+        font-style: italic;
+      }
+    }
+
+    .details {
+      margin-bottom: 1.4em;
+
+      p {
+        padding-bottom: 1em;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem;
+      }
+    }
+
+    .map {
+      height: 25em;
+      left: 10%;
+      margin-bottom: 1.4em;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .form {
+      form {
+        width: 70%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template:
+      "info" auto
+      "form" auto /
+      1fr;
+
+    .form {
+      display: flex;
+      justify-content: center;
+      form {
+        width: 90%;
+      }
+    }
+
+    .info .details {
+      p {
+        text-align: left;
+        margin-left: 2rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+  }
+`
+
+const ContactPage = () => {
   const { language } = useContext(LanguageContext)
-
-  const selectedLanguage = language === "ENGLISH" ? ENGLISH : POLISH
 
   return (
     <PagesLayout
@@ -40,29 +134,7 @@ const ContactPage = ({
 
       <Header headerColor="dark" />
       <ContactWrapper>
-        <div className="info">
-          <div className="title">
-            <h1>{selectedLanguage.title}</h1>
-            <p>{selectedLanguage.subtitle}</p>
-          </div>
-          <div className="details">
-            <p>
-              <img src={home} alt="home" />
-              {selectedLanguage.details.address}}
-            </p>
-            <p>
-              <img src={envelope} alt="email" />
-              {selectedLanguage.details.email}}
-            </p>
-            <p>
-              <img src={phone} alt="phone" />
-              {selectedLanguage.details.phone}}
-            </p>
-          </div>
-          <div className="map">
-            <GoogleMaps />
-          </div>
-        </div>
+        <ContactPageContent language={language} />
         <div className="form">
           <Form
             title="Leave us your info"
