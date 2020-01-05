@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby-link"
 
-import { styles, Button } from "../../utils/"
+import { styles } from "../../utils"
+import Button from "../Button"
 
 const FormWrapper = styled.form`
   color: ${styles.colors.mainLight};

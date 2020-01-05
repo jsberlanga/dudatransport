@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { styles } from "../../utils"
-import EuropeMap from "../../images/map/map2.svg"
+import EuropeMap from "../../images/map/EuropeMap.svg"
 
 const MapWrapper = styled.div`
   grid-area: map;
