@@ -9,7 +9,7 @@ import Footer from "../../components/globals/Footer"
 const NotFoundPage = ({
   languageVariants: { ENGLISH, POLISH },
   globalStyles,
-  componentStyles: { MainWrapper },
+  componentStyles: { NotFoundWrapper },
 }) => {
   const { language } = useContext(languageContext)
 
@@ -22,10 +22,10 @@ const NotFoundPage = ({
     >
       <SEO title="404: Not found" />
       <Header headerColor="dark" />
-      <MainWrapper>
+      <NotFoundWrapper>
         <h1>{selectedLanguage.title}</h1>
         <p>{selectedLanguage.body}</p>
-      </MainWrapper>
+      </NotFoundWrapper>
       <Footer />
     </PagesLayout>
   )

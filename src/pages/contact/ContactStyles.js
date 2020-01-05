@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const MainWrapper = styled.div`
+const ContactWrapper = styled.div`
   display: grid;
   grid-area: main;
   grid-template:
@@ -102,4 +102,4 @@ const MainWrapper = styled.div`
   }
 `
 
-export { MainWrapper }
+export { ContactWrapper }

@@ -15,7 +15,7 @@ import home from "../../images/icons/home.svg"
 const ContactPage = ({
   languageVariants: { ENGLISH, POLISH },
   globalStyles,
-  componentStyles: { MainWrapper },
+  componentStyles: { ContactWrapper },
 }) => {
   const { language } = useContext(LanguageContext)
 
@@ -39,7 +39,7 @@ const ContactPage = ({
       />
 
       <Header headerColor="dark" />
-      <MainWrapper>
+      <ContactWrapper>
         <div className="info">
           <div className="title">
             <h1>{selectedLanguage.title}</h1>
@@ -69,7 +69,7 @@ const ContactPage = ({
             subtitle="and we will get back to you."
           />
         </div>
-      </MainWrapper>
+      </ContactWrapper>
       <Footer />
     </PagesLayout>
   )

@@ -2,15 +2,12 @@ import React from "react"
 import styled, { createGlobalStyle, keyframes } from "styled-components"
 
 import { styles } from "../../../utils"
-
-import MyFont from "../../../static/fonts/montserrat-800.woff"
-
-import MainImage from "../Image"
+import Montserrat800 from "../../../static/fonts/montserrat-800.woff"
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'montserrat-800';
-    src: url('${MyFont}') format('woff');
+    src: url('${Montserrat800}') format('woff');
   }
 
   * {
@@ -81,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
   .text_super_small {font-size: 0.723em;}
 
   .hero {
-    font-family: 'montserrat-800'
+    font-family: 'montserrat-800', "Times New Roman", serif;
   }
 
   p {
@@ -178,23 +175,17 @@ const PagesContainer = styled.div`
   min-height: 150vh;
 `
 
-const PagesLayout = ({ children, url, background, color }) => (
+const PagesLayout = ({ children, background, color }) => (
   <>
     <GlobalStyle background={background} color={color} />
-    <PagesContainer url={url}>{children}</PagesContainer>
+    <PagesContainer>{children}</PagesContainer>
   </>
 )
 
-const HomeLayout = ({ children, url }) => (
+const HomeLayout = ({ children }) => (
   <>
     <GlobalStyle />
-
-    <Container url={url}>
-      <div className="main-image">
-        <MainImage />
-      </div>
-      {children}
-    </Container>
+    <Container>{children}</Container>
   </>
 )
 
